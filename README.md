@@ -127,18 +127,18 @@
 ## Macros:
 | Prefix:           | Result:                                               |
 | ----------------- | ----------------------------------------------------- |
-| s!                | str!("...")                           ('marco' crate) |
+| s!                | str!("...")                       ('add-macro' crate) |
 | f!                | format!("{}", ...)                                    |
-| r!                | regex!(r"...")                        ('marco' crate) |
-| rf!               | regex!(&format!(r"{}", ...))          ('marco' crate) |
+| r!                | regex!(r"...")                    ('add-macro' crate) |
+| rf!               | regex!(&format!(r"{}", ...))      ('add-macro' crate) |
 | v!                | vec![...]                                             |
-| vd!               | vec_deque![...]                       ('marco' crate) |
-| hm!               | hash_map!{ ... =>, }                  ('marco' crate) |
-| hs!               | hash_set![...]                        ('marco' crate) |
-| bm!               | btree_map!{ ... =>, }                 ('marco' crate) |
-| bs!               | btree_set![...]                       ('marco' crate) |
-| ll!               | linked_list![...]                     ('marco' crate) |
-| bh!               | binary_heap![...]                     ('marco' crate) |
+| vd!               | vec_deque![...]                   ('add-macro' crate) |
+| hm!               | hash_map!{ ... =>, }              ('add-macro' crate) |
+| hs!               | hash_set![...]                    ('add-macro' crate) |
+| bm!               | btree_map!{ ... =>, }             ('add-macro' crate) |
+| bs!               | btree_set![...]                   ('add-macro' crate) |
+| ll!               | linked_list![...]                 ('add-macro' crate) |
+| bh!               | binary_heap![...]                 ('add-macro' crate) |
 | bn!               | bson!{...}                             ('bson' crate) |
 | rbn!              | rawbson!{...}                          ('bson' crate) |
 | d!                | doc!{...}                              ('bson' crate) |
@@ -147,8 +147,8 @@
 | prf!              | print!("{}", ...)                                     |
 | pln!              | println!("...")                                       |
 | plf!              | println!("{}", ...)                                   |
-| iln!              | inputln!("...")                       ('marco' crate) |
-| ilf!              | inputln!("{}", ...)                   ('marco' crate) |
+| iln!              | inputln!("...")                   ('add-macro' crate) |
+| ilf!              | inputln!("{}", ...)               ('add-macro' crate) |
 | pan!              | panic!("...")                                         |
 | paf!              | panic!("{}", ...)                                     |
 | tod!              | todo!("...")                                          |
