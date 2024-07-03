@@ -4,7 +4,7 @@
 
 #### P.s. If you have an idea to new snippets then write to me, thank's!
 * Telegram: _[DrakeN_inc](https://t.me/DrakeN_inc)_
-* GitHub: _[DrakeN-inc](https://github.com/DrakeN-inc/vsc-rust-snippets)_
+* GitHub: _[DrakeN-inc](https://github.com/DrakeN-inc/vsc-rust-snippets.git)_
 
 
 ## Comments:

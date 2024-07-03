@@ -9,6 +9,11 @@
   "categories": [
     "Snippets"
   ],
+  "icon": "icon.png",
+  "repository": {
+		"type": "git",
+		"url": "https://github.com/DrakeN-inc/vsc-rust-snippets.git"
+	},
   "contributes": {
     "snippets": [
       {"language": "rust", "path": "./snippets/comments.code-snippets"},
