@@ -1,0 +1,302 @@
+{
+    "macro-alias-str": {
+        "scope": "rust",
+        "prefix": "s!",
+        "body": [
+            "str!(\"$1\")",
+        ],
+        "description": "str!(\"...\")"
+    },
+
+
+    "macro-alias-format": {
+        "scope": "rust",
+        "prefix": "f!",
+        "body": [
+            "format!(\"{$1}\", $2);",
+        ],
+        "description": "format!(\"{}\", ...);"
+    },
+
+
+    "macro-alias-regex": {
+        "scope": "rust",
+        "prefix": "r!",
+        "body": [
+            "regex!(r\"$1\")",
+        ],
+        "description": "regex!(r\"...\")"
+    },
+
+
+    "macro-alias-regex-formatting": {
+        "scope": "rust",
+        "prefix": "rf!",
+        "body": [
+            "regex!(&format!(r\"{$1}\", $2))",
+        ],
+        "description": "regex!(&format!(r\"{}\", ...))"
+    },
+    
+
+    "macro-alias-vec": {
+        "scope": "rust",
+        "prefix": "v!",
+        "body": [
+            "vec![$1]",
+        ],
+        "description": "vec![...]"
+    },
+
+
+    "macro-alias-vec_deque": {
+        "scope": "rust",
+        "prefix": "vd!",
+        "body": [
+            "vec_deque![$1]",
+        ],
+        "description": "vec_deque![...]"
+    },
+
+
+    "macro-alias-hash_map": {
+        "scope": "rust",
+        "prefix": "hm!",
+        "body": [
+            "hash_map! {",
+            "    $1 => $2,",
+            "}",
+        ],
+        "description": "hash_map!{ ... =>, }"
+    },
+
+
+    "macro-alias-hash_set": {
+        "scope": "rust",
+        "prefix": "hs!",
+        "body": [
+            "hash_set![$1]",
+        ],
+        "description": "hash_set![...]"
+    },
+
+
+    "macro-alias-btree_map": {
+        "scope": "rust",
+        "prefix": "bm!",
+        "body": [
+            "btree_map! {",
+            "    $1 => $2,",
+            "}",
+        ],
+        "description": "btree_map!{ ... =>, }"
+    },
+
+
+    "macro-alias-btree_set": {
+        "scope": "rust",
+        "prefix": "bs!",
+        "body": [
+            "btree_set![$1]",
+        ],
+        "description": "btree_set![...]"
+    },
+
+
+    "macro-alias-linked_list": {
+        "scope": "rust",
+        "prefix": "ll!",
+        "body": [
+            "linked_list![$1]",
+        ],
+        "description": "linked_list![...]"
+    },
+
+
+    "macro-alias-binary_heap": {
+        "scope": "rust",
+        "prefix": "bh!",
+        "body": [
+            "binary_heap![$1]",
+        ],
+        "description": "binary_heap![...]"
+    },
+
+
+    "macro-alias-bson": {
+        "scope": "rust",
+        "prefix": "bn!",
+        "body": [
+            "bson! {",
+            "    $1 => $2,",
+            "}",
+        ],
+        "description": "bson!{ ... =>, }"
+    },
+
+
+    "macro-alias-rawbson": {
+        "scope": "rust",
+        "prefix": "rbn!",
+        "body": [
+            "rawbson! {",
+            "    $1 => $2,",
+            "}",
+        ],
+        "description": "rawbson!{ ... =>, }"
+    },
+
+
+    "macro-alias-doc": {
+        "scope": "rust",
+        "prefix": "d!",
+        "body": [
+            "doc! {",
+            "    $1 => $2,",
+            "}",
+        ],
+        "description": "doc!{ ... =>, }"
+    },
+
+
+    "macro-alias-rawdoc": {
+        "scope": "rust",
+        "prefix": "rd!",
+        "body": [
+            "rawdoc! {",
+            "    $1 => $2,",
+            "}",
+        ],
+        "description": "rawdoc!{ ... =>, }"
+    },
+
+    
+	"macro-alias-print": {
+        "scope": "rust",
+        "prefix": "pr!",
+        "body": [
+            "print!(\"$1\");",
+        ],
+        "description": "print!(\"...\");"
+    },
+
+    
+    "macro-alias-print-formatting": {
+        "scope": "rust",
+        "prefix": "prf!",
+        "body": [
+            "print!(\"{$1}\", $2);",
+        ],
+        "description": "print!(\"{}\", ...);"
+    },
+
+    
+    "macro-alias-println": {
+        "scope": "rust",
+        "prefix": "pln!",
+        "body": [
+            "println!(\"$1\");",
+        ],
+        "description": "println!(\"...\");"
+    },
+
+    
+    "macro-alias-println-formatting": {
+        "scope": "rust",
+        "prefix": "plf!",
+        "body": [
+            "println!(\"{$1}\", $2);",
+        ],
+        "description": "println!(\"{}\", ...);"
+    },
+
+
+    "macro-alias-inputln": {
+        "scope": "rust",
+        "prefix": "iln!",
+        "body": [
+            "inputln!(\"$1\")",
+        ],
+        "description": "inputln!(\"...\")"
+    },
+
+    
+    "macro-alias-inputln-formatting": {
+        "scope": "rust",
+        "prefix": "ilf!",
+        "body": [
+            "inputln!(\"{$1}\", $2)",
+        ],
+        "description": "inputln!(\"{}\", ...)"
+    },
+
+
+    "macro-alias-panic": {
+        "scope": "rust",
+        "prefix": "pan!",
+        "body": [
+            "panic!(\"$1\");",
+        ],
+        "description": "panic!(\"...\");"
+    },
+    
+
+    "macro-alias-panic-formatting": {
+        "scope": "rust",
+        "prefix": "paf!",
+        "body": [
+            "panic!(\"{$1}\", $2);",
+        ],
+        "description": "panic!(\"{}\", ...);"
+    },
+
+
+    "macro-alias-todo": {
+        "scope": "rust",
+        "prefix": "tod!",
+        "body": [
+            "todo!(\"{$1}\");",
+        ],
+        "description": "todo!(\"...\");"
+    },
+    
+
+    "macro-alias-todo-formatting": {
+        "scope": "rust",
+        "prefix": "tof!",
+        "body": [
+            "todo!(\"$1\", $2);",
+        ],
+        "description": "todo!(\"{}\", ...);"
+    },
+
+
+    "macro-alias-debug": {
+        "scope": "rust",
+        "prefix": "dbg!",
+        "body": [
+            "dbg!($1);",
+        ],
+        "description": "dbg!(...);"
+    },
+
+
+    "macro-alias-assert": {
+        "scope": "rust",
+        "prefix": "ass!",
+        "body": [
+            "assert!($1);",
+        ],
+        "description": "assert!(...);"
+    },
+
+
+    "macro-alias-assert_eq": {
+        "scope": "rust",
+        "prefix": "ase!",
+        "body": [
+            "assert_eq!($1, $2);",
+        ],
+        "description": "assert_eq!(..., ...);"
+    },
+}

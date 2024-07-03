@@ -1,0 +1,421 @@
+{
+    "method-alias-into": {
+        "scope": "rust",
+        "prefix": ".in",
+        "body": [
+            ".into()",
+        ],
+        "description": ".into()"
+    },
+
+
+    "method-alias-to_owned": {
+        "scope": "rust",
+        "prefix": ".own",
+        "body": [
+            ".to_owned()",
+        ],
+        "description": ".to_owned()"
+    },
+
+
+    "method-alias-as_str": {
+        "scope": "rust",
+        "prefix": ".as_s",
+        "body": [
+            ".as_str()",
+        ],
+        "description": ".as_str()"
+    },
+
+
+    "method-alias-as_bytes": {
+        "scope": "rust",
+        "prefix": ".as_b",
+        "body": [
+            ".as_bytes()",
+        ],
+        "description": ".as_bytes()"
+    },
+
+
+    "method-alias-to_string": {
+        "scope": "rust",
+        "prefix": ".to_s",
+        "body": [
+            ".to_string()",
+        ],
+        "description": ".to_string()"
+    },
+
+
+    "method-alias-to_vec": {
+        "scope": "rust",
+        "prefix": ".to_v",
+        "body": [
+            ".to_vec()",
+        ],
+        "description": ".to_vec()"
+    },
+
+
+    "method-alias-to_lowercase": {
+        "scope": "rust",
+        "prefix": ".low",
+        "body": [
+            ".to_lowercase()",
+        ],
+        "description": ".to_lowercase()"
+    },
+
+
+    "method-alias-to_uppercase": {
+        "scope": "rust",
+        "prefix": ".upp",
+        "body": [
+            ".to_uppercase()",
+        ],
+        "description": ".to_uppercase()"
+    },
+
+    
+    "method-alias-expect": {
+        "scope": "rust",
+        "prefix": ".ex",
+        "body": [
+            ".expect(\"$1\")",
+        ],
+        "description": ".expect()"
+    },
+    
+    
+    "method-alias-unwrap": {
+        "scope": "rust",
+        "prefix": ".un",
+        "body": [
+            ".unwrap()",
+        ],
+        "description": ".unwrap()"
+    },
+
+
+    "method-alias-unwrap_or": {
+        "scope": "rust",
+        "prefix": ".unor",
+        "body": [
+            ".unwrap_or($1)",
+        ],
+        "description": ".unwrap_or(...)"
+    },
+
+
+    "method-alias-unwrap_or_else": {
+        "scope": "rust",
+        "prefix": ".unore",
+        "body": [
+            ".unwrap_or_else($1)",
+        ],
+        "description": ".unwrap_or_else(...)"
+    },
+
+
+    "method-alias-map": {
+        "scope": "rust",
+        "prefix": ".map",
+        "body": [
+            ".map(|v| $1)",
+        ],
+        "description": ".map(|v| ...)"
+    },
+
+
+    "method-alias-map_key": {
+        "scope": "rust",
+        "prefix": ".mae",
+        "body": [
+            ".map(|(k, v)| $1)",
+        ],
+        "description": ".map(|(k, v)| ...)"
+    },
+    
+
+    "method-alias-map_err": {
+        "scope": "rust",
+        "prefix": ".merr",
+        "body": [
+            ".map_err(|e| $1)",
+        ],
+        "description": ".map_err(|e| ...)"
+    },
+
+
+    "method-alias-iter": {
+        "scope": "rust",
+        "prefix": ".ite",
+        "body": [
+            ".iter()",
+        ],
+        "description": ".iter()"
+    },
+
+
+    "method-alias-into_iter": {
+        "scope": "rust",
+        "prefix": ".inte",
+        "body": [
+            ".into_iter()",
+        ],
+        "description": ".into_iter()"
+    },
+
+
+    "method-alias-next": {
+        "scope": "rust",
+        "prefix": ".nex",
+        "body": [
+            ".next()",
+        ],
+        "description": ".next()"
+    },
+
+
+
+    "method-alias-collect": {
+        "scope": "rust",
+        "prefix": ".colt",
+        "body": [
+            ".collect::<${1:Vec<_>}>()",
+        ],
+        "description": ".collect::<...>()"
+    },
+
+
+    "method-alias-with_capacity": {
+        "scope": "rust",
+        "prefix": ".wcap",
+        "body": [
+            ".with_capacity($1)",
+        ],
+        "description": ".with_capacity(...)"
+    },
+
+
+    "method-alias-from_utf8": {
+        "scope": "rust",
+        "prefix": ".fu8",
+        "body": [
+            ".from_utf8()${1:.unwrap()}",
+        ],
+        "description": ".from_utf8()"
+    },
+
+
+    "method-alias-from_utf8_lossy": {
+        "scope": "rust",
+        "prefix": ".fu8l",
+        "body": [
+            ".from_utf8_lossy()${1:.unwrap()}",
+        ],
+        "description": ".from_utf8_lossy()"
+    },
+
+    
+    "method-alias-split": {
+        "scope": "rust",
+        "prefix": ".spl",
+        "body": [
+            ".split(\"$1\")",
+        ],
+        "description": ".split(\"...\")"
+    },
+
+
+    "method-alias-rsplit": {
+        "scope": "rust",
+        "prefix": ".rspl",
+        "body": [
+            ".rsplit($1)",
+        ],
+        "description": ".rsplit(\"...\")"
+    },
+
+
+    "method-alias-splitn": {
+        "scope": "rust",
+        "prefix": ".spln",
+        "body": [
+            ".splitn($1, \"$2\")",
+        ],
+        "description": ".splitn(\"...\", \"...\")"
+    },
+
+
+    "method-alias-rsplitn": {
+        "scope": "rust",
+        "prefix": ".rspln",
+        "body": [
+            ".rsplitn($1, \"$2\")",
+        ],
+        "description": ".rsplitn(..., \"...\")"
+    },
+
+
+    "method-alias-split_once": {
+        "scope": "rust",
+        "prefix": ".splo",
+        "body": [
+            ".split_once(\"$1\")",
+        ],
+        "description": ".split_once(\"...\")"
+    },
+
+
+    "method-alias-rsplit_once": {
+        "scope": "rust",
+        "prefix": ".rsplo",
+        "body": [
+            ".rsplit_once(\"$1\")",
+        ],
+        "description": ".rsplit_once(\"...\")"
+    },
+
+
+    "method-alias-split_terminator": {
+        "scope": "rust",
+        "prefix": ".splt",
+        "body": [
+            ".split_terminator(\"$1\")",
+        ],
+        "description": ".split_terminator(\"...\")"
+    },
+
+
+    "method-alias-rsplit_terminator": {
+        "scope": "rust",
+        "prefix": ".rsplt",
+        "body": [
+            ".rsplit_terminator(\"$1\")",
+        ],
+        "description": ".rsplit_terminator(\"...\")"
+    },
+
+
+    "method-alias-split_whitespace": {
+        "scope": "rust",
+        "prefix": ".splw",
+        "body": [
+            ".split_whitespace()",
+        ],
+        "description": ".split_whitespace()"
+    },
+
+
+    "method-alias-find": {
+        "scope": "rust",
+        "prefix": ".fin",
+        "body": [
+            ".find(\"$1\")",
+        ],
+        "description": ".find(\"...\")"
+    },
+
+
+    "method-alias-rfind": {
+        "scope": "rust",
+        "prefix": ".rfin",
+        "body": [
+            ".rfind(\"$1\")",
+        ],
+        "description": ".rfind(\"...\")"
+    },
+
+
+    "method-alias-matches": {
+        "scope": "rust",
+        "prefix": ".mats",
+        "body": [
+            ".matches(\"$1\")",
+        ],
+        "description": ".matches(\"...\")"
+    },
+
+
+    "method-alias-rmatches": {
+        "scope": "rust",
+        "prefix": ".rmats",
+        "body": [
+            ".rmatches(\"$1\")",
+        ],
+        "description": ".rmatches(\"...\")"
+    },
+
+
+    "method-alias-replace": {
+        "scope": "rust",
+        "prefix": ".rep",
+        "body": [
+            ".replace(\"$1\", \"$2\")",
+        ],
+        "description": ".replace(\"...\", \"...\")"
+    },
+
+
+    "method-alias-replacen": {
+        "scope": "rust",
+        "prefix": ".repn",
+        "body": [
+            ".replacen(\"$2\", \"$3\", $1)",
+        ],
+        "description": ".replacen(\"...\", \"...\", ...)"
+    },
+
+
+    "method-alias-parse": {
+        "scope": "rust",
+        "prefix": ".par",
+        "body": [
+            ".parse($1)",
+        ],
+        "description": ".parse()"
+    },
+
+
+    "method-alias-chars-nth": {
+        "scope": "rust",
+        "prefix": ".nth",
+        "body": [
+            ".chars().nth(${1:0})${2:.unwrap()}",
+        ],
+        "description": ".chars().nth(...).unwrap()"
+    },
+
+
+    "method-alias-get": {
+        "scope": "rust",
+        "prefix": ".get",
+        "body": [
+            ".get($1)",
+        ],
+        "description": ".get(...)"
+    },
+
+
+    "method-alias-push": {
+        "scope": "rust",
+        "prefix": ".push",
+        "body": [
+            ".push($1)",
+        ],
+        "description": ".push(...)"
+    },
+
+    
+    "method-alias-insert": {
+        "scope": "rust",
+        "prefix": ".inst",
+        "body": [
+            ".insert($1, $2)",
+        ],
+        "description": ".insert(..., ...)"
+    },
+}

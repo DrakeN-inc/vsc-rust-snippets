@@ -1,0 +1,232 @@
+{
+    "pub-crate": {
+        "scope": "rust",
+        "prefix": "pubc",
+        "body": [
+            "pub(crate) ",
+        ],
+        "description": "pub(crate) "
+    },
+    
+    
+    "mod-import": {
+        "scope": "rust",
+        "prefix": "mod",
+        "body": [
+            "mod $1;",
+        ],
+        "description": "mod name;"
+    },
+
+    
+    "use": {
+        "scope": "rust",
+        "prefix": "use",
+        "body": [
+            "use $1::${2:*};",
+        ],
+        "description": "use name::...;"
+    },
+
+
+    "use-brace": {
+        "scope": "rust",
+        "prefix": "usb",
+        "body": [
+            "use $1::{ $2 };",
+        ],
+        "description": "use name::...;"
+    },
+
+
+    "use-brace-new-line": {
+        "scope": "rust",
+        "prefix": "usn",
+        "body": [
+            "use $1::{",
+            "    $2,",
+            "}",
+        ],
+        "description": "use name::...;"
+    },
+
+
+    "mod-use": {
+        "scope": "rust",
+        "prefix": "muse",
+        "body": [
+            "mod $1;  use $1::${2:*};",
+        ],
+        "description": "mod name;  use name::...;"
+    },
+
+
+    "mod-use-brace": {
+        "scope": "rust",
+        "prefix": "musb",
+        "body": [
+            "mod $1;  use $1::{ $2 };",
+        ],
+        "description": "mod name;  use name::{ ... };"
+    },
+
+
+    "pub-mod-use": {
+        "scope": "rust",
+        "prefix": "pub muse",
+        "body": [
+            "pub mod $1;  pub use $1::${2:*};",
+        ],
+        "description": "pub mod name;  pub use name::...;"
+    },
+
+
+    "pub-mod-use-brace": {
+        "scope": "rust",
+        "prefix": "pub musb",
+        "body": [
+            "pub mod $1;  pub use $1::{ $2 };",
+        ],
+        "description": "pub mod name;  pub use name::{ ... };"
+    },
+
+
+    "mod-use-crate": {
+        "scope": "rust",
+        "prefix": "cra",
+        "body": [
+            "use crate::$1;",
+        ],
+        "description": "use crate::...;"
+    },
+
+
+    "mod-use-super": {
+        "scope": "rust",
+        "prefix": "sup",
+        "body": [
+            "use super::$1;",
+        ],
+        "description": "use super::...;"
+    },
+
+
+    "mod-use-crate-prelude": {
+        "scope": "rust",
+        "prefix": "prel",
+        "body": [
+            "use crate::prelude::${1:*};",
+        ],
+        "description": "use crate::prelude::*;"
+    },
+    
+    
+	"type": {
+        "scope": "rust",
+        "prefix": "ty",
+        "body": [
+            "type $1 = $2;",
+        ],
+        "description": "type Name = ...;"
+    },
+    
+
+    "let": {
+        "scope": "rust",
+        "prefix": "le",
+        "body": [
+            "let $1 = $2;",
+        ],
+        "description": "let name = ...;"
+    },
+
+
+    "let-mutable": {
+        "scope": "rust",
+        "prefix": "lm",
+        "body": [
+            "let mut $1 = $2;",
+        ],
+        "description": "let mut name = ...;"
+    },
+
+
+    "let-typed": {
+        "scope": "rust",
+        "prefix": "let",
+        "body": [
+            "let $1: $2 = $3;",
+        ],
+        "description": "let name: ... = ...;"
+    },
+
+
+    "let-typed-mutable": {
+        "scope": "rust",
+        "prefix": "lem",
+        "body": [
+            "let mut $1: $2 = $3;",
+        ],
+        "description": "let mut name: ... = ...;"
+    },
+
+
+    "const": {
+        "scope": "rust",
+        "prefix": "cons",
+        "body": [
+            "const $1: $2 = $3;",
+        ],
+        "description": "const name: ... = ...;"
+    },
+
+
+    "static": {
+        "scope": "rust",
+        "prefix": "stat",
+        "body": [
+            "static $1: $2 = $3;",
+        ],
+        "description": "static name: ... = ...;"
+    },
+
+
+    "return": {
+        "scope": "rust",
+        "prefix": "ret",
+        "body": [
+            "return $1;",
+        ],
+        "description": "return ...;"
+    },
+
+
+    "short-break": {
+        "scope": "rust",
+        "prefix": "br",
+        "body": [
+            "break;",
+        ],
+        "description": "break;"
+    },
+    
+    
+    "break": {
+        "scope": "rust",
+        "prefix": "bre",
+        "body": [
+            "break $1;",
+        ],
+        "description": "break ...;"
+    },
+
+    
+    "continue": {
+        "scope": "rust",
+        "prefix": "cont",
+        "body": [
+            "continue;",
+        ],
+        "description": "continue;"
+    },
+}

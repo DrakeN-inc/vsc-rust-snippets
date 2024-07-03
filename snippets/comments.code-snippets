@@ -1,0 +1,140 @@
+{
+    "comment-doc": {
+        "scope": "rust",
+        "prefix": "/d",
+        "body": [
+            "/// $1",
+        ],
+        "description": "/// ..."
+    },
+
+
+    "comment-doc-examples": {
+        "scope": "rust",
+        "prefix": "/e",
+        "body": [
+            "/// $1",
+            "/// ",
+            "/// # Examples:",
+            "/// ```",
+            "/// $2",
+            "/// ```"
+        ],
+        "description": "/// ...  /// # Examples: ..."
+    },
+
+    
+    "comment-doc-dependencies": {
+        "scope": "rust",
+        "prefix": "/p",
+        "body": [
+            "/// $1",
+            "",
+            "/// # Examples:",
+            "/// ```",
+            "/// $3",
+            "/// ```",
+            "",
+            "/// # Dependencies:",
+            "/// * $2",
+        ],
+        "description": "/// ...  /// # Examples: ...  /// # Dependencies: ..."
+    },
+
+
+    "comment-doc-context": {
+        "scope": "rust",
+        "prefix": "/!d",
+        "body": [
+            "//! $1",
+        ],
+        "description": "//! ..."
+    },
+
+
+    "comment-doc-example-context": {
+        "scope": "rust",
+        "prefix": "/!e",
+        "body": [
+            "//! $1",
+            "//! ",
+            "//! # Examples:",
+            "//! ```",
+            "//! $2",
+            "//! ```"
+        ],
+        "description": "//! ...  //! # Examples: ..."
+    },
+
+    
+    "comment-doc-dependencies-context": {
+        "scope": "rust",
+        "prefix": "/!p",
+        "body": [
+            "//! $1",
+            "",
+            "//! # Examples:",
+            "//! ```",
+            "//! $3",
+            "//! ```",
+            "",
+            "//! # Dependencies:",
+            "//! * $2",
+        ],
+        "description": "//! ...  //! # Examples: ...  //! # Dependencies: ..."
+    },
+    
+    
+	"comment-todo": {
+        "scope": "rust",
+        "prefix": "/t",
+        "body": [
+            "// TODO: ${1:...}",
+        ],
+        "description": "// TODO: ..."
+    },
+
+
+    "comment-fix": {
+        "scope": "rust",
+        "prefix": "/f",
+        "body": [
+            "// FIX: ${1:...}",
+        ],
+        "description": "// FIX: ..."
+    },
+
+
+    "comment-note": {
+        "scope": "rust",
+        "prefix": "/n",
+        "body": [
+            "// NOTE: ${1:...}",
+        ],
+        "description": "// NOTE: ..."
+    },
+
+
+    "text-hello-world": {
+        "scope": "rust",
+        "prefix": "hello",
+        "body": [
+            "\"Hello, world!\"",
+        ],
+        "description": "\"Hello, world!\""
+    },
+
+
+    "text-lorem-ipsum": {
+        "scope": "rust",
+        "prefix": "lorem",
+        "body": [
+            "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ",
+            "incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ",
+            "nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu ",
+            "fugiat nulla pariatur.\""
+        ],
+        "description": "\"Lorem ipsum dolor...\""
+    },
+}

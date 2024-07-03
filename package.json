@@ -1,0 +1,24 @@
+{
+  "name": "vsc-rust-snippets",
+  "displayName": "Rust Short Snippets",
+  "description": "The short snippets for Rust language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {"language": "rust", "path": "./snippets/comments.code-snippets"},
+      {"language": "rust", "path": "./snippets/attributes.code-snippets"},
+      {"language": "rust", "path": "./snippets/operators.code-snippets"},
+      {"language": "rust", "path": "./snippets/blocks.code-snippets"},
+      {"language": "rust", "path": "./snippets/structures.code-snippets"},
+      {"language": "rust", "path": "./snippets/macros.code-snippets"},
+      {"language": "rust", "path": "./snippets/methods.code-snippets"},
+      {"language": "rust", "path": "./snippets/types.code-snippets"}
+    ]
+  }
+}

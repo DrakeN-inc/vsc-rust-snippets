@@ -1,0 +1,110 @@
+{     
+    "type-alias-result": {
+        "scope": "rust",
+        "prefix": "Res",
+        "body": [
+            "Result<$1>",
+        ],
+        "description": "Result<T, E>"
+    },
+
+
+    "type-alias-option": {
+        "scope": "rust",
+        "prefix": "Opt",
+        "body": [
+            "Option<$1>",
+        ],
+        "description": "Option<T>"
+    },
+
+
+    "type-alias-mutex": {
+        "scope": "rust",
+        "prefix": "Mut",
+        "body": [
+            "Mutex<$1>",
+        ],
+        "description": "Mutex<T>"
+    },
+
+
+    "type-alias-arc": {
+        "scope": "rust",
+        "prefix": "Arc",
+        "body": [
+            "Arc<$1>",
+        ],
+        "description": "Arc<T>"
+    },
+
+
+    "type-alias-arc-mutex": {
+        "scope": "rust",
+        "prefix": "AMut",
+        "body": [
+            "Arc<Mutex<$1>>",
+        ],
+        "description": "Arc<Mutex<T>>"
+    },
+
+
+    "type-alias-arc-mutex-new": {
+        "scope": "rust",
+        "prefix": "AMut::new",
+        "body": [
+            "Arc::new(Mutex::new($1))",
+        ],
+        "description": "Arc::new(Mutex::new(...))"
+    },
+
+
+    "type-alias-into": {
+        "scope": "rust",
+        "prefix": "Into",
+        "body": [
+            "Into<$1>",
+        ],
+        "description": "Into<...>"
+    },
+
+
+    "type-alias-into-string": {
+        "scope": "rust",
+        "prefix": "IntoS",
+        "body": [
+            "Into<String>",
+        ],
+        "description": "Into<String>"
+    },
+
+
+    "type-alias-from": {
+        "scope": "rust",
+        "prefix": "From",
+        "body": [
+            "From<$1>",
+        ],
+        "description": "From<...>"
+    },
+
+
+    "type-blank-result": {
+        "scope": "rust",
+        "prefix": "ty Result",
+        "body": [
+            "pub type Result<T> = std::result::Result<T, Error>;",
+        ],
+        "description": "type Result<T> = std::result::Result<T, Error>;"
+    },
+
+    
+    "type-blank-handler": {
+        "scope": "rust",
+        "prefix": "ty Handler",
+        "body": [
+            "pub type Handler = ${1:fn()};",
+        ],
+        "description": "pub type Handler = ...;"
+    },
+}

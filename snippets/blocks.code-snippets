@@ -1,0 +1,304 @@
+{
+    "block-mod": {
+        "scope": "rust",
+        "prefix": "mod",
+        "body": [
+            "mod {",
+            "    $1",
+            "}"
+        ],
+        "description": "mod { ... }"
+    },
+
+    
+    "block-async": {
+        "scope": "rust",
+        "prefix": "asyn",
+        "body": [
+            "async {",
+            "    $1",
+            "}"
+        ],
+        "description": "async { ... }"
+    },
+
+
+    "block-async-block_on": {
+        "scope": "rust",
+        "prefix": "asyb",
+        "body": [
+            "use futures::executor::block_on;",
+            "",
+            "block_on(async {",
+            "    $1",
+            "});"
+        ],
+        "description": "block_on( async { ... } );"
+    },
+
+
+    "block-unsafe": {
+        "scope": "rust",
+        "prefix": "unsf",
+        "body": [
+            "unsafe {",
+            "    $1",
+            "}"
+        ],
+        "description": "unsafe { ... }"
+    },
+    
+    
+    "block-if": {
+        "scope": "rust",
+        "prefix": "if",
+        "body": [
+            "if $1 {",
+            "    $2",
+            "}"
+        ],
+        "description": "if ... { ... }"
+    },
+
+
+    "block-if-else": {
+        "scope": "rust",
+        "prefix": "ife",
+        "body": [
+            "if $1 {",
+            "    $2",
+            "} else {",
+            "    $3",
+            "}"
+        ],
+        "description": "if ... { ... } else { ... }"
+    },
+
+
+    "block-short-if-else": {
+        "scope": "rust",
+        "prefix": "if?",
+        "body": [
+            "if $1 { $2 }else{ $3 }",
+        ],
+        "description": "if ... { ... }else{ ... }"
+    },
+
+
+    "block-if-let": {
+        "scope": "rust",
+        "prefix": "ifl",
+        "body": [
+            "if let $1 = $2 {",
+            "    $3",
+            "}"
+        ],
+        "description": "if let ... = ... { ... }"
+    },
+
+
+    "alias-if-let-result-ok": {
+        "scope": "rust",
+        "prefix": "if Ok",
+        "body": [
+            "if let Ok($1) = $2 {",
+            "    $3",
+            "}"
+        ],
+        "description": "if let Ok(...) = ... { ... }"
+    },
+
+
+    "alias-if-let-result-err": {
+        "scope": "rust",
+        "prefix": "if Err",
+        "body": [
+            "if let Err($1) = $2 {",
+            "    $3",
+            "}"
+        ],
+        "description": "if let Err(...) = ... { ... }"
+    },
+
+
+    "alias-if-let-option-some": {
+        "scope": "rust",
+        "prefix": "if Some",
+        "body": [
+            "if let Some($1) = $2 {",
+            "    $3",
+            "}"
+        ],
+        "description": "if let Some(...) = ... { ... }"
+    },
+
+
+    "alias-if-let-option-none": {
+        "scope": "rust",
+        "prefix": "if None",
+        "body": [
+            "if let None = $1 {",
+            "    $2",
+            "}"
+        ],
+        "description": "if let None = ... { ... }"
+    },
+
+
+    "block-match": {
+        "scope": "rust",
+        "prefix": "mat",
+        "body": [
+            "match $1 {",
+            "    $2 => $3,",
+            "}"
+        ],
+        "description": "match ... { ... => ..., }"
+    },
+
+
+    "alias-match-result": {
+        "scope": "rust",
+        "prefix": "mat Res",
+        "body": [
+            "match $1 {",
+            "    Ok(v) => $2,",
+            "    Err(e) => $3",
+            "}"
+        ],
+        "description": "match ... { Ok(v) =>, Err(e) => }"
+    },
+
+
+    "alias-match-option": {
+        "scope": "rust",
+        "prefix": "mat Opt",
+        "body": [
+            "match $1 {",
+            "    Some(v) => $2,",
+            "    None => $3",
+            "}"
+        ],
+        "description": "match ... { Some(v) =>, None => }"
+    },
+    
+
+    "block-for": {
+        "scope": "rust",
+        "prefix": "fo",
+        "body": [
+            "for $1 in $2 {",
+            "    $3",
+            "}"
+        ],
+        "description": "for ... in ... { ... }"
+    },
+
+
+    "block-for-index": {
+        "scope": "rust",
+        "prefix": "foi",
+        "body": [
+            "for i in 0..${1:.len()} {",
+            "    $2",
+            "}"
+        ],
+        "description": "for i in 0..n { ... }"
+    },
+
+
+    "block-for-key-value": {
+        "scope": "rust",
+        "prefix": "foe",
+        "body": [
+            "for (k, v) in ${1:.enumerate()} {",
+            "    $2",
+            "}"
+        ],
+        "description": "for (k, v) in ... { ... }"
+    },
+
+
+    "block-while": {
+        "scope": "rust",
+        "prefix": "wh",
+        "body": [
+            "while $1 {",
+            "    $2",
+            "}"
+        ],
+        "description": "while ... { ... }"
+    },
+
+
+    "block-while-let": {
+        "scope": "rust",
+        "prefix": "whl",
+        "body": [
+            "while let $1 = $2 {",
+            "    $3",
+            "}"
+        ],
+        "description": "while let ... = ... { ... }"
+    },
+
+
+    "alias-while-let-result-ok": {
+        "scope": "rust",
+        "prefix": "wh Ok",
+        "body": [
+            "while let Ok($1) = $2 {",
+            "    $3",
+            "}"
+        ],
+        "description": "while let Ok(...) = ... { ... }"
+    },
+
+
+    "alias-while-let-result-err": {
+        "scope": "rust",
+        "prefix": "wh Err",
+        "body": [
+            "while let Err($1) = $2 {",
+            "    $3",
+            "}"
+        ],
+        "description": "while let Err(...) = ... { ... }"
+    },
+
+    
+    "alias-while-let-option-some": {
+        "scope": "rust",
+        "prefix": "wh Some",
+        "body": [
+            "while let Some($1) = $2 {",
+            "    $3",
+            "}"
+        ],
+        "description": "while let Some(...) = ... { ... }"
+    },
+
+
+    "alias-while-let-option-none": {
+        "scope": "rust",
+        "prefix": "wh None",
+        "body": [
+            "while let None = $1 {",
+            "    $2",
+            "}"
+        ],
+        "description": "while let None = ... { ... }"
+    },
+
+
+    "block-loop": {
+        "scope": "rust",
+        "prefix": "loo",
+        "body": [
+            "loop {",
+            "    $1",
+            "}"
+        ],
+        "description": "loop { ... }"
+    },
+}

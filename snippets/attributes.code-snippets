@@ -1,0 +1,60 @@
+{
+	"attribute-allow": {
+        "scope": "rust",
+        "prefix": "#allow",
+        "body": [
+            "#[allow(${1|dead_code,unused_variables,unused_imports|})]"
+        ],
+        "description": "#[allow(...)]"
+    },
+
+
+    "attribute-derive": {
+        "scope": "rust",
+        "prefix": "#derive",
+        "body": [
+            "#[derive(${1|Debug\\, Clone,Eq\\, PartialEq,Ord\\, PartialOrd,Serialize\\, Deserialize,Debug,Clone,Copy,Hash,Eq,PartialEq,Ord,PartialOrd,Serialize,Deserialize,Default,Display,Error|})]"
+        ],
+        "description": "#[derive(...)]"
+    },
+
+
+    "attribute-cfg": {
+        "scope": "rust",
+        "prefix": "#cfg",
+        "body": [
+            "#[cfg(${1:test})]"
+        ],
+        "description": "#[cfg(...)]"
+    },
+
+
+    "attribute-test": {
+        "scope": "rust",
+        "prefix": "#test",
+        "body": [
+            "#[test]"
+        ],
+        "description": "#[test]"
+    },
+
+
+    "attribute-doc": {
+        "scope": "rust",
+        "prefix": "#doc",
+        "body": [
+            "#[doc = \"$1\"]"
+        ],
+        "description": "#[doc = \"...\"]"
+    },
+
+    
+    "attribute-doc-context": {
+        "scope": "rust",
+        "prefix": "#!doc",
+        "body": [
+            "#![doc = \"$1\"]"
+        ],
+        "description": "#![doc = \"...\"]"
+    },
+}
