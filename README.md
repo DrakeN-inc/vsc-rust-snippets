@@ -32,7 +32,9 @@
 | #test             | #[test]                                               |
 | #doc              | #[doc = "..."]                                        |
 | #!doc             | #![doc = "..."]                                       |
-| #mac_exp          | #[macro_export]                                       |
+| #err              | #[error("...")]                   ('add-macro' crate) |
+| #disp             | #[display("...")]                 ('add-macro' crate) |
+| #mac_ex           | #[macro_export]                                       |
 | #mac_use          | #[macro_use]                                          |
 | #proc             | #[proc_macro]                                         |
 | #proc_attr        | #[proc_macro_attribute]                               |
@@ -135,7 +137,7 @@
 | s!                | str!("...")                       ('add-macro' crate) |
 | f!                | format!("{}", ...)                                    |
 | r!                | regex!(r"...")                    ('add-macro' crate) |
-| rf!               | regex!(&format!(r"{}", ...))      ('add-macro' crate) |
+| rf!               | regex!( format!(r"{}", ...) )     ('add-macro' crate) |
 | v!                | vec![...]                                             |
 | vd!               | vec_deque![...]                   ('add-macro' crate) |
 | hm!               | hash_map!{ ... =>, }              ('add-macro' crate) |
@@ -161,6 +163,10 @@
 | dbg!              | dbg!(...)                                             |
 | ass!              | assert!(...)                                          |
 | ase!              | assert_eq!(..., ...)                                  |
+| asn!              | assert_ne!(..., ...)                                  |
+| dass!             | debug_assert!(...)                                    |
+| dase!             | debug_assert_eq!(..., ...)                            |
+| dasn!             | debug_assert_ne!(..., ...)                            |
 | mac!              | macro_rules! name { ... }                             |
 | pari!             | parse_macro_input!(input as ...)                      |
 | quo!              | quote! { ... }                                        |

@@ -59,9 +59,29 @@
     },
 
 
+    "attribute-error": {
+        "scope": "rust",
+        "prefix": "#err",
+        "body": [
+            "#[error(\"$1\")]"
+        ],
+        "description": "#[error(\"...\")]"
+    },
+
+
+    "attribute-display": {
+        "scope": "rust",
+        "prefix": "#disp",
+        "body": [
+            "#[display(\"$1\")]"
+        ],
+        "description": "#[display(\"...\")]"
+    },
+
+
     "attribute-macro_export": {
         "scope": "rust",
-        "prefix": "#mac_exp",
+        "prefix": "#mac_ex",
         "body": [
             "#[macro_export]"
         ],

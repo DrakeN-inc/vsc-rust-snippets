@@ -33,9 +33,9 @@
         "scope": "rust",
         "prefix": "rf!",
         "body": [
-            "regex!(&format!(r\"{$1}\", $2))",
+            "regex!( format!(r\"{$1}\", $2) )",
         ],
-        "description": "regex!(&format!(r\"{}\", ...))"
+        "description": "regex!( format!(r\"{}\", ...) )"
     },
     
 
@@ -301,6 +301,46 @@
     },
 
 
+    "macro-alias-assert_ne": {
+        "scope": "rust",
+        "prefix": "asn!",
+        "body": [
+            "assert_ne!($1, $2);",
+        ],
+        "description": "assert_ne!(..., ...);"
+    },
+
+
+    "macro-alias-debug_assert": {
+        "scope": "rust",
+        "prefix": "dass!",
+        "body": [
+            "debug_assert!($1);",
+        ],
+        "description": "debug_assert!(...);"
+    },
+
+
+    "macro-alias-debug_assert_eq": {
+        "scope": "rust",
+        "prefix": "dase!",
+        "body": [
+            "debug_assert_eq!($1, $2);",
+        ],
+        "description": "debug_assert_eq!(..., ...);"
+    },
+
+
+    "macro-alias-debug_assert_ne": {
+        "scope": "rust",
+        "prefix": "dasn!",
+        "body": [
+            "debug_assert_ne!($1, $2);",
+        ],
+        "description": "debug_assert_ne!(..., ...);"
+    },
+
+
     "macro-alias-macro_rules": {
         "scope": "rust",
         "prefix": "mac!",
@@ -333,6 +373,6 @@
             "    $1",
             "}",
         ],
-        "description": "macro_rules! { ... }"
+        "description": "quote! { ... }"
     },
 }
