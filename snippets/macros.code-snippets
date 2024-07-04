@@ -299,4 +299,40 @@
         ],
         "description": "assert_eq!(..., ...);"
     },
+
+
+    "macro-alias-macro_rules": {
+        "scope": "rust",
+        "prefix": "mac!",
+        "body": [
+            "macro_rules! $1 {",
+            "    ($2) => {",
+            "        $3",
+            "    }",
+            "}",
+        ],
+        "description": "macro_rules! { ... }"
+    },
+
+
+    "macro-alias-parse_macro_input": {
+        "scope": "rust",
+        "prefix": "pari!",
+        "body": [
+            "parse_macro_input!(${1:input} as $2)",
+        ],
+        "description": "parse_macro_input!(input as ...)"
+    },
+    
+    
+    "macro-alias-quote": {
+        "scope": "rust",
+        "prefix": "quo!",
+        "body": [
+            "quote! {",
+            "    $1",
+            "}",
+        ],
+        "description": "macro_rules! { ... }"
+    },
 }

@@ -57,4 +57,54 @@
         ],
         "description": "#![doc = \"...\"]"
     },
+
+
+    "attribute-macro_export": {
+        "scope": "rust",
+        "prefix": "#mac_exp",
+        "body": [
+            "#[macro_export]"
+        ],
+        "description": "#[macro_export]"
+    },
+
+
+    "attribute-macro_use": {
+        "scope": "rust",
+        "prefix": "#mac_use",
+        "body": [
+            "#[macro_use]"
+        ],
+        "description": "#[macro_use]"
+    },
+
+
+    "attribute-proc_macro": {
+        "scope": "rust",
+        "prefix": "#proc",
+        "body": [
+            "#[proc_macro]"
+        ],
+        "description": "#[proc_macro]"
+    },
+
+
+    "attribute-proc_macro_attribute": {
+        "scope": "rust",
+        "prefix": "#proc_attr",
+        "body": [
+            "#[proc_macro_attribute]"
+        ],
+        "description": "#[proc_macro_attribute]"
+    },
+
+
+    "attribute-proc_macro_derive": {
+        "scope": "rust",
+        "prefix": "#proc_der",
+        "body": [
+            "#[proc_macro_derive($1)]"
+        ],
+        "description": "#[proc_macro_derive(...)]"
+    },
 }

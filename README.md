@@ -32,6 +32,11 @@
 | #test             | #[test]                                               |
 | #doc              | #[doc = "..."]                                        |
 | #!doc             | #![doc = "..."]                                       |
+| #mac_exp          | #[macro_export]                                       |
+| #mac_use          | #[macro_use]                                          |
+| #proc             | #[proc_macro]                                         |
+| #proc_attr        | #[proc_macro_attribute]                               |
+| #proc_der         | #[proc_macro_derive(...)]                             |
 
 
 ## Operators:
@@ -156,6 +161,9 @@
 | dbg!              | dbg!(...)                                             |
 | ass!              | assert!(...)                                          |
 | ase!              | assert_eq!(..., ...)                                  |
+| mac!              | macro_rules! name { ... }                             |
+| pari!             | parse_macro_input!(input as ...)                      |
+| quo!              | quote! { ... }                                        |
 
 
 ## Methods:
