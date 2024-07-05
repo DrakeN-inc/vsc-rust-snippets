@@ -1,7 +1,7 @@
 {
     "method-alias-into": {
         "scope": "rust",
-        "prefix": ".in",
+        "prefix": ".into",
         "body": [
             ".into()",
         ],
@@ -11,7 +11,7 @@
 
     "method-alias-to_owned": {
         "scope": "rust",
-        "prefix": ".own",
+        "prefix": ".to_owned",
         "body": [
             ".to_owned()",
         ],
@@ -21,7 +21,7 @@
 
     "method-alias-as_str": {
         "scope": "rust",
-        "prefix": ".as_s",
+        "prefix": ".as_str",
         "body": [
             ".as_str()",
         ],
@@ -29,9 +29,29 @@
     },
 
 
+    "method-alias-as_os_str": {
+        "scope": "rust",
+        "prefix": ".as_os_str",
+        "body": [
+            ".as_os_str()",
+        ],
+        "description": ".as_os_str()"
+    },
+
+
+    "method-alias-as_mut_os_str": {
+        "scope": "rust",
+        "prefix": ".as_mut_os_str",
+        "body": [
+            ".as_mut_os_str()",
+        ],
+        "description": ".as_mut_os_str()"
+    },
+
+
     "method-alias-as_bytes": {
         "scope": "rust",
-        "prefix": ".as_b",
+        "prefix": ".as_bytes",
         "body": [
             ".as_bytes()",
         ],
@@ -39,9 +59,29 @@
     },
 
 
+    "method-alias-as_path": {
+        "scope": "rust",
+        "prefix": ".as_path",
+        "body": [
+            ".as_path()",
+        ],
+        "description": ".as_path()"
+    },
+
+
+    "method-alias-to_str": {
+        "scope": "rust",
+        "prefix": ".to_str",
+        "body": [
+            ".to_str()",
+        ],
+        "description": ".to_str()"
+    },
+
+
     "method-alias-to_string": {
         "scope": "rust",
-        "prefix": ".to_s",
+        "prefix": ".to_string",
         "body": [
             ".to_string()",
         ],
@@ -49,9 +89,19 @@
     },
 
 
+    "method-alias-to_string_lossy": {
+        "scope": "rust",
+        "prefix": ".to_string_lossy",
+        "body": [
+            ".to_string_lossy()",
+        ],
+        "description": ".to_string_lossy()"
+    },
+
+
     "method-alias-to_vec": {
         "scope": "rust",
-        "prefix": ".to_v",
+        "prefix": ".to_vec",
         "body": [
             ".to_vec()",
         ],
@@ -61,7 +111,7 @@
 
     "method-alias-to_lowercase": {
         "scope": "rust",
-        "prefix": ".low",
+        "prefix": ".to_lowercase",
         "body": [
             ".to_lowercase()",
         ],
@@ -71,7 +121,7 @@
 
     "method-alias-to_uppercase": {
         "scope": "rust",
-        "prefix": ".upp",
+        "prefix": ".to_uppercase",
         "body": [
             ".to_uppercase()",
         ],
@@ -81,7 +131,7 @@
     
     "method-alias-expect": {
         "scope": "rust",
-        "prefix": ".ex",
+        "prefix": ".expect",
         "body": [
             ".expect(\"$1\")",
         ],
@@ -91,7 +141,7 @@
     
     "method-alias-unwrap": {
         "scope": "rust",
-        "prefix": ".un",
+        "prefix": ".unwrap",
         "body": [
             ".unwrap()",
         ],
@@ -101,7 +151,7 @@
 
     "method-alias-unwrap_or": {
         "scope": "rust",
-        "prefix": ".unor",
+        "prefix": ".unwrap_or",
         "body": [
             ".unwrap_or($1)",
         ],
@@ -111,7 +161,7 @@
 
     "method-alias-unwrap_or_else": {
         "scope": "rust",
-        "prefix": ".unore",
+        "prefix": ".unwrap_or_else",
         "body": [
             ".unwrap_or_else($1)",
         ],
@@ -131,7 +181,7 @@
 
     "method-alias-map_key": {
         "scope": "rust",
-        "prefix": ".mae",
+        "prefix": ".map k, v",
         "body": [
             ".map(|(k, v)| $1)",
         ],
@@ -141,7 +191,7 @@
 
     "method-alias-map_err": {
         "scope": "rust",
-        "prefix": ".merr",
+        "prefix": ".map_err",
         "body": [
             ".map_err(|e| $1)",
         ],
@@ -151,7 +201,7 @@
 
     "method-alias-iter": {
         "scope": "rust",
-        "prefix": ".ite",
+        "prefix": ".iter",
         "body": [
             ".iter()",
         ],
@@ -161,7 +211,7 @@
 
     "method-alias-into_iter": {
         "scope": "rust",
-        "prefix": ".inte",
+        "prefix": ".into_iter",
         "body": [
             ".into_iter()",
         ],
@@ -171,7 +221,7 @@
 
     "method-alias-next": {
         "scope": "rust",
-        "prefix": ".nex",
+        "prefix": ".next",
         "body": [
             ".next()",
         ],
@@ -182,7 +232,7 @@
 
     "method-alias-collect": {
         "scope": "rust",
-        "prefix": ".colt",
+        "prefix": ".collect",
         "body": [
             ".collect::<${1:Vec<_>}>()",
         ],
@@ -192,7 +242,7 @@
 
     "method-alias-with_capacity": {
         "scope": "rust",
-        "prefix": ".wcap",
+        "prefix": ".with_capacity",
         "body": [
             ".with_capacity($1)",
         ],
@@ -202,7 +252,7 @@
 
     "method-alias-from_utf8": {
         "scope": "rust",
-        "prefix": ".fu8",
+        "prefix": ".from_utf8",
         "body": [
             ".from_utf8()${1:.unwrap()}",
         ],
@@ -212,7 +262,7 @@
 
     "method-alias-from_utf8_lossy": {
         "scope": "rust",
-        "prefix": ".fu8l",
+        "prefix": ".from_utf8_lossy",
         "body": [
             ".from_utf8_lossy()${1:.unwrap()}",
         ],
@@ -222,7 +272,7 @@
     
     "method-alias-split": {
         "scope": "rust",
-        "prefix": ".spl",
+        "prefix": ".split",
         "body": [
             ".split(\"$1\")",
         ],
@@ -232,7 +282,7 @@
 
     "method-alias-rsplit": {
         "scope": "rust",
-        "prefix": ".rspl",
+        "prefix": ".rsplit",
         "body": [
             ".rsplit($1)",
         ],
@@ -242,7 +292,7 @@
 
     "method-alias-splitn": {
         "scope": "rust",
-        "prefix": ".spln",
+        "prefix": ".splitn",
         "body": [
             ".splitn($1, \"$2\")",
         ],
@@ -252,7 +302,7 @@
 
     "method-alias-rsplitn": {
         "scope": "rust",
-        "prefix": ".rspln",
+        "prefix": ".rsplitn",
         "body": [
             ".rsplitn($1, \"$2\")",
         ],
@@ -262,7 +312,7 @@
 
     "method-alias-split_once": {
         "scope": "rust",
-        "prefix": ".splo",
+        "prefix": ".split_once",
         "body": [
             ".split_once(\"$1\")",
         ],
@@ -272,7 +322,7 @@
 
     "method-alias-rsplit_once": {
         "scope": "rust",
-        "prefix": ".rsplo",
+        "prefix": ".rsplit_once",
         "body": [
             ".rsplit_once(\"$1\")",
         ],
@@ -282,7 +332,7 @@
 
     "method-alias-split_terminator": {
         "scope": "rust",
-        "prefix": ".splt",
+        "prefix": ".split_terminator",
         "body": [
             ".split_terminator(\"$1\")",
         ],
@@ -292,7 +342,7 @@
 
     "method-alias-rsplit_terminator": {
         "scope": "rust",
-        "prefix": ".rsplt",
+        "prefix": ".rsplit_terminator",
         "body": [
             ".rsplit_terminator(\"$1\")",
         ],
@@ -302,7 +352,7 @@
 
     "method-alias-split_whitespace": {
         "scope": "rust",
-        "prefix": ".splw",
+        "prefix": ".split_whitespace",
         "body": [
             ".split_whitespace()",
         ],
@@ -312,7 +362,7 @@
 
     "method-alias-find": {
         "scope": "rust",
-        "prefix": ".fin",
+        "prefix": ".find",
         "body": [
             ".find(\"$1\")",
         ],
@@ -322,7 +372,7 @@
 
     "method-alias-rfind": {
         "scope": "rust",
-        "prefix": ".rfin",
+        "prefix": ".rfind",
         "body": [
             ".rfind(\"$1\")",
         ],
@@ -332,7 +382,7 @@
 
     "method-alias-matches": {
         "scope": "rust",
-        "prefix": ".mats",
+        "prefix": ".matches",
         "body": [
             ".matches(\"$1\")",
         ],
@@ -342,7 +392,7 @@
 
     "method-alias-rmatches": {
         "scope": "rust",
-        "prefix": ".rmats",
+        "prefix": ".rmatches",
         "body": [
             ".rmatches(\"$1\")",
         ],
@@ -352,7 +402,7 @@
 
     "method-alias-replace": {
         "scope": "rust",
-        "prefix": ".rep",
+        "prefix": ".replace",
         "body": [
             ".replace(\"$1\", \"$2\")",
         ],
@@ -362,7 +412,7 @@
 
     "method-alias-replacen": {
         "scope": "rust",
-        "prefix": ".repn",
+        "prefix": ".replacen",
         "body": [
             ".replacen(\"$2\", \"$3\", $1)",
         ],
@@ -372,7 +422,7 @@
 
     "method-alias-parse": {
         "scope": "rust",
-        "prefix": ".par",
+        "prefix": ".parse",
         "body": [
             ".parse($1)",
         ],
@@ -382,7 +432,7 @@
 
     "method-alias-chars-nth": {
         "scope": "rust",
-        "prefix": ".nth",
+        "prefix": ".chars().nth",
         "body": [
             ".chars().nth(${1:0})${2:.unwrap()}",
         ],
@@ -409,13 +459,103 @@
         "description": ".push(...)"
     },
 
+
+    "method-alias-push_str": {
+        "scope": "rust",
+        "prefix": ".push_str",
+        "body": [
+            ".push_str($1)",
+        ],
+        "description": ".push_str(...)"
+    },
+
+
+    "method-alias-push_back": {
+        "scope": "rust",
+        "prefix": ".push_back",
+        "body": [
+            ".push_back($1)",
+        ],
+        "description": ".push_back(...)"
+    },
+
+
+    "method-alias-push_front": {
+        "scope": "rust",
+        "prefix": ".push_front",
+        "body": [
+            ".push_front($1)",
+        ],
+        "description": ".push_front(...)"
+    },
+
     
     "method-alias-insert": {
         "scope": "rust",
-        "prefix": ".inst",
+        "prefix": ".insert",
         "body": [
-            ".insert($1, $2)",
+            ".insert($1)",
         ],
-        "description": ".insert(..., ...)"
+        "description": ".insert(...)"
+    },
+
+
+    "method-alias-is_empty": {
+        "scope": "rust",
+        "prefix": ".is_empty",
+        "body": [
+            ".is_empty()",
+        ],
+        "description": ".is_empty()"
+    },
+
+
+    "method-alias-is_dir": {
+        "scope": "rust",
+        "prefix": ".is_dir",
+        "body": [
+            ".is_dir()",
+        ],
+        "description": ".is_dir()"
+    },
+
+
+    "method-alias-is_file": {
+        "scope": "rust",
+        "prefix": ".is_file",
+        "body": [
+            ".is_file()",
+        ],
+        "description": ".is_file()"
+    },
+
+
+    "method-alias-is_relative": {
+        "scope": "rust",
+        "prefix": ".is_relative",
+        "body": [
+            ".is_relative()",
+        ],
+        "description": ".is_relative()"
+    },
+
+
+    "method-alias-is_absolute": {
+        "scope": "rust",
+        "prefix": ".is_absolute",
+        "body": [
+            ".is_absolute()",
+        ],
+        "description": ".is_absolute()"
+    },
+
+
+    "method-alias-is_symlink": {
+        "scope": "rust",
+        "prefix": ".is_symlink",
+        "body": [
+            ".is_symlink()",
+        ],
+        "description": ".is_symlink()"
     },
 }

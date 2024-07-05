@@ -1,7 +1,7 @@
 {
     "macro-alias-str": {
         "scope": "rust",
-        "prefix": "s!",
+        "prefix": "str!",
         "body": [
             "str!(\"$1\")",
         ],
@@ -11,7 +11,7 @@
 
     "macro-alias-format": {
         "scope": "rust",
-        "prefix": "f!",
+        "prefix": "format!",
         "body": [
             "format!(\"{$1}\", $2);",
         ],
@@ -21,7 +21,7 @@
 
     "macro-alias-regex": {
         "scope": "rust",
-        "prefix": "r!",
+        "prefix": "regex!",
         "body": [
             "regex!(r\"$1\")",
         ],
@@ -31,7 +31,7 @@
 
     "macro-alias-regex-formatting": {
         "scope": "rust",
-        "prefix": "rf!",
+        "prefix": "regex! format!",
         "body": [
             "regex!( format!(r\"{$1}\", $2) )",
         ],
@@ -41,7 +41,7 @@
 
     "macro-alias-vec": {
         "scope": "rust",
-        "prefix": "v!",
+        "prefix": "vec!",
         "body": [
             "vec![$1]",
         ],
@@ -51,7 +51,7 @@
 
     "macro-alias-vec_deque": {
         "scope": "rust",
-        "prefix": "vd!",
+        "prefix": "vec_deque!",
         "body": [
             "vec_deque![$1]",
         ],
@@ -61,7 +61,7 @@
 
     "macro-alias-hash_map": {
         "scope": "rust",
-        "prefix": "hm!",
+        "prefix": "hash_map!",
         "body": [
             "hash_map! {",
             "    $1 => $2,",
@@ -73,7 +73,7 @@
 
     "macro-alias-hash_set": {
         "scope": "rust",
-        "prefix": "hs!",
+        "prefix": "hash_set!",
         "body": [
             "hash_set![$1]",
         ],
@@ -83,7 +83,7 @@
 
     "macro-alias-btree_map": {
         "scope": "rust",
-        "prefix": "bm!",
+        "prefix": "btree_map!",
         "body": [
             "btree_map! {",
             "    $1 => $2,",
@@ -95,7 +95,7 @@
 
     "macro-alias-btree_set": {
         "scope": "rust",
-        "prefix": "bs!",
+        "prefix": "btree_set!",
         "body": [
             "btree_set![$1]",
         ],
@@ -105,7 +105,7 @@
 
     "macro-alias-linked_list": {
         "scope": "rust",
-        "prefix": "ll!",
+        "prefix": "linked_list!",
         "body": [
             "linked_list![$1]",
         ],
@@ -115,7 +115,7 @@
 
     "macro-alias-binary_heap": {
         "scope": "rust",
-        "prefix": "bh!",
+        "prefix": "binary_heap!",
         "body": [
             "binary_heap![$1]",
         ],
@@ -125,7 +125,7 @@
 
     "macro-alias-bson": {
         "scope": "rust",
-        "prefix": "bn!",
+        "prefix": "bson!",
         "body": [
             "bson! {",
             "    $1 => $2,",
@@ -137,7 +137,7 @@
 
     "macro-alias-rawbson": {
         "scope": "rust",
-        "prefix": "rbn!",
+        "prefix": "rawbson!",
         "body": [
             "rawbson! {",
             "    $1 => $2,",
@@ -149,7 +149,7 @@
 
     "macro-alias-doc": {
         "scope": "rust",
-        "prefix": "d!",
+        "prefix": "doc!",
         "body": [
             "doc! {",
             "    $1 => $2,",
@@ -161,7 +161,7 @@
 
     "macro-alias-rawdoc": {
         "scope": "rust",
-        "prefix": "rd!",
+        "prefix": "rawdoc!",
         "body": [
             "rawdoc! {",
             "    $1 => $2,",
@@ -173,7 +173,7 @@
     
 	"macro-alias-print": {
         "scope": "rust",
-        "prefix": "pr!",
+        "prefix": "print!",
         "body": [
             "print!(\"$1\");",
         ],
@@ -183,7 +183,7 @@
     
     "macro-alias-print-formatting": {
         "scope": "rust",
-        "prefix": "prf!",
+        "prefix": "print!,",
         "body": [
             "print!(\"{$1}\", $2);",
         ],
@@ -193,7 +193,7 @@
     
     "macro-alias-println": {
         "scope": "rust",
-        "prefix": "pln!",
+        "prefix": "println!",
         "body": [
             "println!(\"$1\");",
         ],
@@ -203,7 +203,7 @@
     
     "macro-alias-println-formatting": {
         "scope": "rust",
-        "prefix": "plf!",
+        "prefix": "println!,",
         "body": [
             "println!(\"{$1}\", $2);",
         ],
@@ -213,7 +213,7 @@
 
     "macro-alias-inputln": {
         "scope": "rust",
-        "prefix": "iln!",
+        "prefix": "inputln!",
         "body": [
             "inputln!(\"$1\")",
         ],
@@ -223,7 +223,7 @@
     
     "macro-alias-inputln-formatting": {
         "scope": "rust",
-        "prefix": "ilf!",
+        "prefix": "inputln!,",
         "body": [
             "inputln!(\"{$1}\", $2)",
         ],
@@ -233,7 +233,7 @@
 
     "macro-alias-panic": {
         "scope": "rust",
-        "prefix": "pan!",
+        "prefix": "panic!",
         "body": [
             "panic!(\"$1\");",
         ],
@@ -243,7 +243,7 @@
 
     "macro-alias-panic-formatting": {
         "scope": "rust",
-        "prefix": "paf!",
+        "prefix": "panic!,",
         "body": [
             "panic!(\"{$1}\", $2);",
         ],
@@ -253,7 +253,7 @@
 
     "macro-alias-todo": {
         "scope": "rust",
-        "prefix": "tod!",
+        "prefix": "todo!",
         "body": [
             "todo!(\"{$1}\");",
         ],
@@ -263,7 +263,7 @@
 
     "macro-alias-todo-formatting": {
         "scope": "rust",
-        "prefix": "tof!",
+        "prefix": "todo!,",
         "body": [
             "todo!(\"$1\", $2);",
         ],
@@ -283,7 +283,7 @@
 
     "macro-alias-assert": {
         "scope": "rust",
-        "prefix": "ass!",
+        "prefix": "assert!",
         "body": [
             "assert!($1);",
         ],
@@ -293,7 +293,7 @@
 
     "macro-alias-assert_eq": {
         "scope": "rust",
-        "prefix": "ase!",
+        "prefix": "assert_eq!",
         "body": [
             "assert_eq!($1, $2);",
         ],
@@ -303,7 +303,7 @@
 
     "macro-alias-assert_ne": {
         "scope": "rust",
-        "prefix": "asn!",
+        "prefix": "assert_ne!",
         "body": [
             "assert_ne!($1, $2);",
         ],
@@ -313,7 +313,7 @@
 
     "macro-alias-debug_assert": {
         "scope": "rust",
-        "prefix": "dass!",
+        "prefix": "debug_assert!",
         "body": [
             "debug_assert!($1);",
         ],
@@ -323,7 +323,7 @@
 
     "macro-alias-debug_assert_eq": {
         "scope": "rust",
-        "prefix": "dase!",
+        "prefix": "debug_assert_eq!",
         "body": [
             "debug_assert_eq!($1, $2);",
         ],
@@ -333,7 +333,7 @@
 
     "macro-alias-debug_assert_ne": {
         "scope": "rust",
-        "prefix": "dasn!",
+        "prefix": "debug_assert_ne!",
         "body": [
             "debug_assert_ne!($1, $2);",
         ],
@@ -343,7 +343,7 @@
 
     "macro-alias-macro_rules": {
         "scope": "rust",
-        "prefix": "mac!",
+        "prefix": "macro_rules!",
         "body": [
             "macro_rules! $1 {",
             "    ($2) => {",
@@ -351,13 +351,13 @@
             "    }",
             "}",
         ],
-        "description": "macro_rules! { ... }"
+        "description": "macro_rules! {}"
     },
 
 
     "macro-alias-parse_macro_input": {
         "scope": "rust",
-        "prefix": "pari!",
+        "prefix": "parse_macro_input!",
         "body": [
             "parse_macro_input!(${1:input} as $2)",
         ],
@@ -367,12 +367,12 @@
     
     "macro-alias-quote": {
         "scope": "rust",
-        "prefix": "quo!",
+        "prefix": "quote!",
         "body": [
             "quote! {",
             "    $1",
             "}",
         ],
-        "description": "quote! { ... }"
+        "description": "quote! {}"
     },
 }

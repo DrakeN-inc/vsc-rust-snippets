@@ -21,9 +21,9 @@
       {"language": "rust", "path": "./snippets/operators.code-snippets"},
       {"language": "rust", "path": "./snippets/blocks.code-snippets"},
       {"language": "rust", "path": "./snippets/structures.code-snippets"},
+      {"language": "rust", "path": "./snippets/types.code-snippets"},
       {"language": "rust", "path": "./snippets/macros.code-snippets"},
-      {"language": "rust", "path": "./snippets/methods.code-snippets"},
-      {"language": "rust", "path": "./snippets/types.code-snippets"}
+      {"language": "rust", "path": "./snippets/methods.code-snippets"}
     ]
   }
 }

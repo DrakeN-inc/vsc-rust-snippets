@@ -1,7 +1,7 @@
 {     
     "type-alias-result": {
         "scope": "rust",
-        "prefix": "Res",
+        "prefix": "Result",
         "body": [
             "Result<$1>",
         ],
@@ -11,7 +11,7 @@
 
     "type-alias-option": {
         "scope": "rust",
-        "prefix": "Opt",
+        "prefix": "Option",
         "body": [
             "Option<$1>",
         ],
@@ -21,7 +21,7 @@
 
     "type-alias-mutex": {
         "scope": "rust",
-        "prefix": "Mut",
+        "prefix": "Mutex",
         "body": [
             "Mutex<$1>",
         ],
@@ -41,7 +41,7 @@
 
     "type-alias-arc-mutex": {
         "scope": "rust",
-        "prefix": "AMut",
+        "prefix": "Arc<Mutex",
         "body": [
             "Arc<Mutex<$1>>",
         ],
@@ -51,7 +51,7 @@
 
     "type-alias-arc-mutex-new": {
         "scope": "rust",
-        "prefix": "AMut::new",
+        "prefix": "Arc<Mutex::new",
         "body": [
             "Arc::new(Mutex::new($1))",
         ],
@@ -71,7 +71,7 @@
 
     "type-alias-into-string": {
         "scope": "rust",
-        "prefix": "IntoS",
+        "prefix": "Into<String",
         "body": [
             "Into<String>",
         ],
@@ -89,11 +89,21 @@
     },
 
 
+    "type-alias-from_str": {
+        "scope": "rust",
+        "prefix": "From<&str",
+        "body": [
+            "From<&str>",
+        ],
+        "description": "From<...>"
+    },
+
+
     "type-blank-result": {
         "scope": "rust",
-        "prefix": "ty Result",
+        "prefix": "pub type Result",
         "body": [
-            "pub type Result<T> = std::result::Result<T, Error>;",
+            "pub type Result<T> = std::result::Result<T, ${1:Error}>;",
         ],
         "description": "type Result<T> = std::result::Result<T, Error>;"
     },
@@ -101,7 +111,7 @@
     
     "type-blank-handler": {
         "scope": "rust",
-        "prefix": "ty Handler",
+        "prefix": "pub type Handler",
         "body": [
             "pub type Handler = ${1:fn()};",
         ],

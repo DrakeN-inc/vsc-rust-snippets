@@ -61,7 +61,7 @@
 
     "attribute-error": {
         "scope": "rust",
-        "prefix": "#err",
+        "prefix": "#error",
         "body": [
             "#[error(\"$1\")]"
         ],
@@ -71,7 +71,7 @@
 
     "attribute-display": {
         "scope": "rust",
-        "prefix": "#disp",
+        "prefix": "#display",
         "body": [
             "#[display(\"$1\")]"
         ],
@@ -81,7 +81,7 @@
 
     "attribute-macro_export": {
         "scope": "rust",
-        "prefix": "#mac_ex",
+        "prefix": "#macro_export",
         "body": [
             "#[macro_export]"
         ],
@@ -91,7 +91,7 @@
 
     "attribute-macro_use": {
         "scope": "rust",
-        "prefix": "#mac_use",
+        "prefix": "#macro_use",
         "body": [
             "#[macro_use]"
         ],
@@ -101,7 +101,7 @@
 
     "attribute-proc_macro": {
         "scope": "rust",
-        "prefix": "#proc",
+        "prefix": "#proc_macro",
         "body": [
             "#[proc_macro]"
         ],
@@ -111,7 +111,7 @@
 
     "attribute-proc_macro_attribute": {
         "scope": "rust",
-        "prefix": "#proc_attr",
+        "prefix": "#proc_macro_attribute",
         "body": [
             "#[proc_macro_attribute]"
         ],
@@ -121,7 +121,7 @@
 
     "attribute-proc_macro_derive": {
         "scope": "rust",
-        "prefix": "#proc_der",
+        "prefix": "#proc_macro_derive",
         "body": [
             "#[proc_macro_derive($1)]"
         ],

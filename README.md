@@ -8,228 +8,241 @@
 
 
 ## Comments:
-| Prefix:           | Result:                                               |
-| ----------------- | ----------------------------------------------------- |
-| /d                | /// ...                                               |
-| /e                | /// # Examples: ...                                   |
-| /p                | /// # Examples: ...  # Dependencies: ...              |
-| /!d               | //! ...                                               |
-| /!e               | //! # Examples: ...                                   |
-| /!p               | //! # Examples: ...  # Dependencies: ...              |
-| /t                | // TODO: ...                                          |
-| /f                | // FIX: ...                                           |
-| /n                | // NOTE: ...                                          |
-| hello             | "Hello, world!"                                       |
-| lorem             | "Lorem ipsum dolor ..."                               |
+| Prefix:                   | Result:                                               |
+| ------------------------- | ----------------------------------------------------- |
+| /doc                      | /// # Examples: ...                                   |
+| /doc dep                  | /// # Examples: ...  # Dependencies: ...              |
+| /!doc                     | //! # Examples: ...                                   |
+| /!doc dep                 | //! # Examples: ...  # Dependencies: ...              |
+| /todo                     | // TODO: ...                                          |
+| /fix                      | // FIX: ...                                           |
+| /note                     | // NOTE: ...                                          |
+| hello                     | "Hello, world!"                                       |
+| lorem                     | "Lorem ipsum dolor ..."                               |
 
 
 ## Attributes:
-| Prefix:           | Result:                                               |
-| ----------------- | ----------------------------------------------------- |
-| #allow            | #[allow(...)]                                         |
-| #derive           | #[derive(...)]                                        |
-| #cfg              | #[cfg(...)]                                           |
-| #test             | #[test]                                               |
-| #doc              | #[doc = "..."]                                        |
-| #!doc             | #![doc = "..."]                                       |
-| #err              | #[error("...")]                   ('add-macro' crate) |
-| #disp             | #[display("...")]                 ('add-macro' crate) |
-| #mac_ex           | #[macro_export]                                       |
-| #mac_use          | #[macro_use]                                          |
-| #proc             | #[proc_macro]                                         |
-| #proc_attr        | #[proc_macro_attribute]                               |
-| #proc_der         | #[proc_macro_derive(...)]                             |
+| Prefix:                   | Result:                                               |
+| ------------------------- | ----------------------------------------------------- |
+| #allow                    | #[allow(...)]                                         |
+| #derive                   | #[derive(...)]                                        |
+| #cfg                      | #[cfg(...)]                                           |
+| #test                     | #[test]                                               |
+| #doc                      | #[doc = "..."]                                        |
+| #!doc                     | #![doc = "..."]                                       |
+| #error                    | #[error("...")]                   ('add-macro' crate) |
+| #display                  | #[display("...")]                 ('add-macro' crate) |
+| #macro_export             | #[macro_export]                                       |
+| #macro_use                | #[macro_use]                                          |
+| #proc_macro               | #[proc_macro]                                         |
+| #proc_macro_attribute     | #[proc_macro_attribute]                               |
+| #proc_macro_derive        | #[proc_macro_derive(...)]                             |
 
 
 ## Operators:
-| Prefix:           | Result:                                               |
-| ----------------- | ----------------------------------------------------- |
-| pubc              | pub(crate)                                            |
-| mod               | mod name;                                             |
-| use               | use name::...;                                        |
-| usb               | use name::{ ... };                                    |
-| usn               | use name::{\n ..., \n};                               |
-| muse              | mod name;  use name::...;                             |
-| musb              | mod name;  use name::{ ... };                         |
-| cra               | use crate::...;                                       |
-| sup               | use super::...;                                       |
-| prel              | use crate::prelude::*;                                |
-| ty                | type name = ...;                                      |
-| le                | let name = ...;                                       |
-| lm                | let mut name = ...;                                   |
-| let               | let name: ... = ...;                                  |
-| lem               | let mut name: ... = ...;                              |
-| cons              | const name: ... = ...;                                |
-| stat              | static name: ... = ...;                               |
-| ret               | return ...;                                           |
-| br                | break;                                                |
-| bre               | break ...;                                            |
-| cont              | continue;                                             |
+| Prefix:                   | Result:                                               |
+| ------------------------- | ----------------------------------------------------- |
+| pubcrate                  | pub(crate)                                            |
+| mod                       | mod name;                                             |
+| use                       | use name::...;                                        |
+| use {                     | use name::{};                                         |
+| mod use                   | mod name;  use name::...;                             |
+| mod use {                 | mod name;  use name::{};                              |
+| mod pub use               | mod name;  pub use name::...;                         |
+| mod pub use {             | mod name;  pub use name::{};                          |
+| crate                     | use crate::...;                                       |
+| super                     | use super::...;                                       |
+| prelude                   | use crate::prelude::*;                                |
+| type                      | type name = ...;                                      |
+| let                       | let name = ...;                                       |
+| let mut                   | let mut name = ...;                                   |
+| let >                     | let name: ... = ...;                                  |
+| let mut >                 | let mut name: ... = ...;                              |
+| const                     | const name: ... = ...;                                |
+| static                    | static name: ... = ...;                               |
+| return                    | return ...;                                           |
+| break                     | break;                                                |
+| break                     | break ...;                                            |
+| continue                  | continue;                                             |
 
 
 ## Blocks:
-| Prefix:           | Result:                                               |
-| ----------------- | ----------------------------------------------------- |
-| mod               | mod { ... }                                           |
-| asyn              | async { ... }                                         |
-| asyb              | block_on( async { ... } )                             |
-| unsf              | unsafe { ... }                                        |
-| if                | if ... { ... }                                        |
-| ife               | if ... { ... } else { ... }                           |
-| if?               | if ... { ... }else{ ... }                             |
-| ifl               | if let ... = ... { ... }                              |
-| if Ok             | if let Ok(_) = ... { ... }                            |
-| if Err            | if let Err(_) = ... { ... }                           |
-| if Some           | if let Some(_) = ... { ... }                          |
-| if None           | if let None = ... { ... }                             |
-| mat               | match ... { ... => ..., }                             |
-| mat Res           | match ... { Ok(v) =>, Err(e) => }                     |
-| mat Opt           | match ... { Some(v) =>, None => }                     |
-| fo                | for ... in ... { ... }                                |
-| foi               | for i in 0...n { ... }                                |
-| foe               | for (k, v) in ... { ... }                             |
-| wh                | while ... { ... }                                     |
-| whl               | while let ... = ... { ... }                           |
-| wh Ok             | while let Ok(_) = ... { ... }                         |
-| wh Err            | while let Err(_) = ... { ... }                        |
-| wh Some           | while let Some(_) = ... { ... }                       |
-| wh None           | while let None = ... { ... }                          |
-| loo               | loop { ... }                                          |
+| Prefix:                   | Result:                                               |
+| ------------------------- | ----------------------------------------------------- |
+| mod {                     | mod {}                                                |
+| async {                   | async {}                                              |
+| async { block_on }        | block_on( async {} )                                  |
+| unsafe {                  | unsafe {}                                             |
+| if                        | if ... {}                                             |
+| if else                   | if ... {} else {}                                     |
+| if else if                | if ... {} else if {} else {}                          |
+| if?                       | if ... { }else{ }                                     |
+| if let                    | if let ... = ... {}                                   |
+| if let Ok                 | if let Ok(_) = ... {}                                 |
+| if let Err                | if let Err(_) = ... {}                                |
+| if let Some               | if let Some(_) = ... {}                               |
+| if let None               | if let None = ... {}                                  |
+| match                     | match ... { ... => ..., }                             |
+| match Result              | match ... { Ok(v) =>, Err(e) => }                     |
+| match Option              | match ... { Some(v) =>, None => }                     |
+| for                       | for ... in ... {}                                     |
+| for i                     | for i in 0...n {}                                     |
+| for k, v                  | for (k, v) in ... {}                                  |
+| while                     | while ... {}                                          |
+| while let                 | while let ... = ... {}                                |
+| while let Ok              | while let Ok(_) = ... {}                              |
+| while let Err             | while let Err(_) = ... {}                             |
+| while Some                | while let Some(_) = ... {}                            |
+| while None                | while let None = ... {}                               |
+| loop {                    | loop {}                                               |
 
 
 ## Structures:
-| Prefix:           | Result:                                               |
-| ----------------- | ----------------------------------------------------- |
-| fn                | fn name(_) { ... }                                    |
-| fn>               | fn name(_) -> ... { ... }                             |
-| afn               | async fn name(_) { ... }                              |
-| afn>              | async fn name(_) -> ... { ... }                       |
-| fn>Res            | fn name(_) -> Result<T,E> { ... }                     |
-| afn>Res           | async fn name(_) -> Result<T,E> { ... }               |
-| fn>Opt            | fn name(_) -> Option<T> { ... }                       |
-| afn>Opt           | async fn name(_) -> Option<T> { ... }                 |
-| main              | fn main() -> io::Result<()> { ... }                   |
-| amain             | async fn main() -> io::Result<()> { ... }             |
-| test              | fn test() -> io::Result<()> { ... }                   |
-| atest             | fn test() -> io::Result<()> { async{ ... } }          |
-| fn new            | pub fn new(_) -> Self { ... }                         |
-| fn get_           | pub fn get_(&self) -> ... { ... }                     |
-| fn set_           | pub fn set_(&mut self, val: ...) { ... }              |
-| fn builder        | pub fn builder() -> ... { ... }                       |
-| fn build          | pub fn build(self) -> ... { ... }                     |
-| fn take           | pub fn take(self) -> ... { ... }                      |
-| tr                | trait Name { ... }                                    |
-| im                | impl Name { ... }                                     |
-| im Display        | impl Display for Name { ... }                         |
-| im FromStr        | impl FromStr for Name { ... }                         |
-| st                | struct Name { ... }                                   |
-| stim              | struct Name { ... }  impl Name { ... }                |
-| st Builder        | struct _Builder { ... }  impl _Builder { ... }        |
-| en                | enum Name { ... }                                     |
-| enim              | enum Name { ... }  impl Name { ... }                  |
-| en Builder        | enum _Builder { ... }  impl _Builder { ... }          |
-| en Error          | enum Error { ... }                ('thiserror' crate) |
-
-
-## Macros:
-| Prefix:           | Result:                                               |
-| ----------------- | ----------------------------------------------------- |
-| s!                | str!("...")                       ('add-macro' crate) |
-| f!                | format!("{}", ...)                                    |
-| r!                | regex!(r"...")                    ('add-macro' crate) |
-| rf!               | regex!( format!(r"{}", ...) )     ('add-macro' crate) |
-| v!                | vec![...]                                             |
-| vd!               | vec_deque![...]                   ('add-macro' crate) |
-| hm!               | hash_map!{ ... =>, }              ('add-macro' crate) |
-| hs!               | hash_set![...]                    ('add-macro' crate) |
-| bm!               | btree_map!{ ... =>, }             ('add-macro' crate) |
-| bs!               | btree_set![...]                   ('add-macro' crate) |
-| ll!               | linked_list![...]                 ('add-macro' crate) |
-| bh!               | binary_heap![...]                 ('add-macro' crate) |
-| bn!               | bson!{...}                             ('bson' crate) |
-| rbn!              | rawbson!{...}                          ('bson' crate) |
-| d!                | doc!{...}                              ('bson' crate) |
-| rd!               | rawdoc!{...}                           ('bson' crate) |
-| pr!               | print!("...")                                         |
-| prf!              | print!("{}", ...)                                     |
-| pln!              | println!("...")                                       |
-| plf!              | println!("{}", ...)                                   |
-| iln!              | inputln!("...")                   ('add-macro' crate) |
-| ilf!              | inputln!("{}", ...)               ('add-macro' crate) |
-| pan!              | panic!("...")                                         |
-| paf!              | panic!("{}", ...)                                     |
-| tod!              | todo!("...")                                          |
-| tof!              | todo!("{}", ...)                                      |
-| dbg!              | dbg!(...)                                             |
-| ass!              | assert!(...)                                          |
-| ase!              | assert_eq!(..., ...)                                  |
-| asn!              | assert_ne!(..., ...)                                  |
-| dass!             | debug_assert!(...)                                    |
-| dase!             | debug_assert_eq!(..., ...)                            |
-| dasn!             | debug_assert_ne!(..., ...)                            |
-| mac!              | macro_rules! name { ... }                             |
-| pari!             | parse_macro_input!(input as ...)                      |
-| quo!              | quote! { ... }                                        |
-
-
-## Methods:
-| Prefix:           | Result:                                               |
-| ----------------- | ----------------------------------------------------- |
-| .in               | .into()                                               |
-| .own              | .to_owned()                                           |
-| .as_s             | .as_str()                                             |
-| .as_b             | .as_bytes()                                           |
-| .to_s             | .to_string()                                          |
-| .to_v             | .to_vec()                                             |
-| .low              | .to_lowercase()                                       |
-| .upp              | .to_uppercase()                                       |
-| .ex               | .expect("...")                                        |
-| .un               | .unwrap()                                             |
-| .unor             | .unwrap_or(...)                                       |
-| .unore            | .unwrap_or_else(...)                                  |
-| .map              | .map(|v| ...)                                         |
-| .mae              | .map(|(k, v)| ...)                                    |
-| .merr             | .map_error(|(k, v)| ...)                              |
-| .ite              | .iter()                                               |
-| .inte             | .into_iter()                                          |
-| .nex              | .next()                                               |
-| .colt             | .collect::<...>()                                     |
-| .wcap             | .with_capacity(...)                                   |
-| .fu8              | .from_utf8()                                          |
-| .fu8l             | .from_utf8_lossy()                                    |
-| .spl              | .split("...")                                         |
-| .rspl             | .rsplit("...")                                        |
-| .spln             | .splitn(..., "...")                                   |
-| .rspln            | .rsplitn(..., "...")                                  |
-| .splo             | .split_once("...")                                    |
-| .rsplo            | .rsplit_once("...")                                   |
-| .splt             | .split_terminator(."...")                             |
-| .rsplt            | .rsplit_terminator(."...")                            |
-| .splw             | .split_whitespace()                                   |
-| .fin              | .find("...")                                          |
-| .rfin             | .rfind("...")                                         |
-| .mats             | .matches("...")                                       |
-| .rmats            | .rmatches("...")                                      |
-| .rep              | .replace("...", "...")                                |
-| .repn             | .replacen("...", "...", ...)                          |
-| .par              | .parse()                                              |
-| .nth              | .chars().nth(...)                                     |
-| .get              | .get(...)                                             |
-| .push             | .push(...)                                            |
-| .inst             | .insert(..., ...)                                     |
+| Prefix:                   | Result:                                               |
+| ------------------------- | ----------------------------------------------------- |
+| fn                        | fn name(_) {}                                         |
+| fn >                      | fn name(_) -> ... {}                                  |
+| fn > Result               | fn name(_) -> Result<T,E> {}                          |
+| fn > Option               | fn name(_) -> Option<T> {}                            |
+| fn main                   | fn main() -> io::Result<()> {}                        |
+| async fn main             | async fn main() -> io::Result<()> {}                  |
+| fn test                   | fn test() -> io::Result<()> {}                        |
+| async fn test             | fn test() -> io::Result<()> { async{} }               |
+| pub fn new                | pub fn new(_) -> Self {}                              |
+| pub fn get_               | pub fn get_(&self) -> ... {}                          |
+| pub fn set_               | pub fn set_(&mut self, val: ...) {}                   |
+| pub fn builder            | pub fn builder() -> ... {}                            |
+| pub fn build              | pub fn build(self) -> ... {}                          |
+| pub fn take               | pub fn take(self) -> ... {}                           |
+| trait                     | trait Name {}                                         |
+| impl                      | impl Name {}                                          |
+| impl Display              | impl Display for Name {}                              |
+| impl FromStr              | impl FromStr for Name {}                              |
+| struct                    | struct Name {}                                        |
+| struct impl               | struct Name {}  impl Name {}                          |
+| struct Builder            | struct _Builder {}  impl _Builder {}                  |
+| enum                      | enum Name {}                                          |
+| enum impl                 | enum Name {}  impl Name {}                            |
+| enum Builder              | enum _Builder {}  impl _Builder {}                    |
+| enum Error                | enum Error {}                     ('add-macro' crate) |
+| Self {                    | Self {}                                               |
 
 
 ## Types:
-| Prefix:           | Result:                                               |
-| ----------------- | ----------------------------------------------------- |
-| Res               | Result<T, E>                                          |
-| Opt               | Option<T>                                             |
-| Mut               | Mutex<T>                                              |
-| Arc               | Arc<T>                                                |
-| AMut              | Arc<Mutex<T>>                                         |
-| AMut::new         | Arc::new(Mutex::new(...))                             |
-| Into              | Into<T>                                               |
-| IntoS             | Into<String>                                          |
-| From              | From<T>                                               |
-| ty Result         | pub type Result<T> = std::result::Result<T, Error>;   |
-| ty Handler        | pub type Handler = fn();                              |
+| Prefix:                   | Result:                                               |
+| ------------------------- | ----------------------------------------------------- |
+| Result                    | Result<T, E>                                          |
+| Option                    | Option<T>                                             |
+| Mutex                     | Mutex<T>                                              |
+| Arc                       | Arc<T>                                                |
+| Arc<Mutex                 | Arc<Mutex<T>>                                         |
+| Arc<Mutex::new            | Arc::new(Mutex::new(...))                             |
+| Into                      | Into<T>                                               |
+| Into<String               | Into<String>                                          |
+| From                      | From<T>                                               |
+| From<&str                 | From<&str>                                            |
+| pub type Result           | pub type Result<T> = std::result::Result<T, Error>;   |
+| pub type Handler          | pub type Handler = fn();                              |
+
+
+## Macros:
+| Prefix:                   | Result:                                               |
+| ------------------------- | ----------------------------------------------------- |
+| str!                      | str!("...")                       ('add-macro' crate) |
+| format!                   | format!("{}", ...)                                    |
+| regex!                    | regex!(r"...")                    ('add-macro' crate) |
+| regex! format!            | regex!( format!(r"{}", ...) )     ('add-macro' crate) |
+| vec!                      | vec![...]                                             |
+| vec_deque!                | vec_deque![...]                   ('add-macro' crate) |
+| hash_map!                 | hash_map!{ =>, }                  ('add-macro' crate) |
+| hash_set!                 | hash_set![...]                    ('add-macro' crate) |
+| btree_map!                | btree_map!{ =>, }                 ('add-macro' crate) |
+| btree_set!                | btree_set![...]                   ('add-macro' crate) |
+| linked_list!              | linked_list![...]                 ('add-macro' crate) |
+| binary_heap!              | binary_heap![...]                 ('add-macro' crate) |
+| bson!                     | bson!{...}                             ('bson' crate) |
+| rawbson!                  | rawbson!{...}                          ('bson' crate) |
+| doc!                      | doc!{...}                              ('bson' crate) |
+| rawdoc!                   | rawdoc!{...}                           ('bson' crate) |
+| print!                    | print!("...")                                         |
+| print!,                   | print!("{}", ...)                                     |
+| println!                  | println!("...")                                       |
+| println!,                 | println!("{}", ...)                                   |
+| input!                    | input!("...")                     ('add-macro' crate) |
+| input!,                   | input!("{}", ...)                 ('add-macro' crate) |
+| panic!                    | panic!("...")                                         |
+| panic!,                   | panic!("{}", ...)                                     |
+| todo!                     | todo!("...")                                          |
+| todo!,                    | todo!("{}", ...)                                      |
+| dbg!                      | dbg!(...)                                             |
+| assert!                   | assert!(...)                                          |
+| assert_eq!                | assert_eq!(..., ...)                                  |
+| assert_ne!                | assert_ne!(..., ...)                                  |
+| debug_assert!             | debug_assert!(...)                                    |
+| debug_assert_eq!          | debug_assert_eq!(..., ...)                            |
+| debug_assert_ne!          | debug_assert_ne!(..., ...)                            |
+| macro_rules!              | macro_rules! name {}                                  |
+| parse_macro_input!        | parse_macro_input!(input as ...)                      |
+| quote!                    | quote! {}                                             |
+
+
+## Methods:
+| Prefix:                   | Result:                                               |
+| ------------------------- | ----------------------------------------------------- |
+| .into                     | .into()                                               |
+| .to_owned                 | .to_owned()                                           |
+| .as_str                   | .as_str()                                             |
+| .as_os_str                | .as_os_str()                                          |
+| .as_must_os_str           | .as_must_os_str()                                     |
+| .as_bytes                 | .as_bytes()                                           |
+| .as_path                  | .as_path()                                            |
+| .to_str                   | .to_str()                                             |
+| .to_string                | .to_string()                                          |
+| .to_string_lossy          | .to_string_lossy()                                    |
+| .to_vec                   | .to_vec()                                             |
+| .to_path_buf              | .to_path_buf()                                        |
+| .to_lowercase             | .to_lowercase()                                       |
+| .to_uppercase             | .to_uppercase()                                       |
+| .expect                   | .expect("...")                                        |
+| .unwrap                   | .unwrap()                                             |
+| .unwrap_or                | .unwrap_or(...)                                       |
+| .unwrap_or_else           | .unwrap_or_else(...)                                  |
+| .map                      | .map(|v| ...)                                         |
+| .map k, v                 | .map(|(k, v)| ...)                                    |
+| .map_error                | .map_error(|(k, v)| ...)                              |
+| .iter                     | .iter()                                               |
+| .into_iter                | .into_iter()                                          |
+| .next                     | .next()                                               |
+| .collect                  | .collect::<...>()                                     |
+| .with_capacity            | .with_capacity(...)                                   |
+| .from_utf8                | .from_utf8()                                          |
+| .from_utf8_lossy          | .from_utf8_lossy()                                    |
+| .split                    | .split("...")                                         |
+| .rsplit                   | .rsplit("...")                                        |
+| .splitn                   | .splitn(..., "...")                                   |
+| .rsplitn                  | .rsplitn(..., "...")                                  |
+| .split_once               | .split_once("...")                                    |
+| .rsplit_once              | .rsplit_once("...")                                   |
+| .split_terminator         | .split_terminator(."...")                             |
+| .rsplit_terminator        | .rsplit_terminator(."...")                            |
+| .split_whitespace         | .split_whitespace()                                   |
+| .find                     | .find("...")                                          |
+| .rfind                    | .rfind("...")                                         |
+| .matches                  | .matches("...")                                       |
+| .rmatches                 | .rmatches("...")                                      |
+| .replace                  | .replace("...", "...")                                |
+| .replacen                 | .replacen("...", "...", ...)                          |
+| .parse                    | .parse()                                              |
+| .chars().nth              | .chars().nth(...)                                     |
+| .get                      | .get(...)                                             |
+| .push                     | .push(...)                                            |
+| .push_str                 | .push_str(...)                                        |
+| .push_back                | .push_back(...)                                       |
+| .push_front               | .push_front(...)                                      |
+| .insert                   | .insert(...)                                          |
+| .is_empty                 | .is_empty()                                           |
+| .is_dir                   | .is_dir()                                             |
+| .is_file                  | .is_file()                                            |
+| .is_relative              | .is_relative()                                        |
+| .is_absolute              | .is_absolute()                                        |
+| .is_symlink               | .is_symlink()                                         |

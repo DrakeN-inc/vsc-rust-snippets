@@ -1,103 +1,55 @@
 {    
     "fn": {
         "scope": "rust",
-        "prefix": "fn",
+        "prefix": "fn ",
         "body": [
             "fn $1($2) {",
             "    $3",
             "}"
         ],
-        "description": "fn name(_) { ... }"
+        "description": "fn name(_) {}"
     },
 
 
     "fn-return": {
         "scope": "rust",
-        "prefix": "fn>",
+        "prefix": "fn >",
         "body": [
             "fn $1($3) -> $2 {",
             "    $4",
             "}"
         ],
-        "description": "fn name(_) { ... }"
-    },
-
-
-    "async-fn": {
-        "scope": "rust",
-        "prefix": "afn",
-        "body": [
-            "async fn $1($2) {",
-            "    $3",
-            "}"
-        ],
-        "description": "async fn name(_) -> ... { ... }"
-    },
-
-
-    "async-fn-return": {
-        "scope": "rust",
-        "prefix": "afn>",
-        "body": [
-            "async fn $1($3) -> $2 {",
-            "    $4",
-            "}"
-        ],
-        "description": "async fn name(_) -> ... { ... }"
+        "description": "fn name(_) {}"
     },
 
 
     "fn-return-result": {
         "scope": "rust",
-        "prefix": "fn>Res",
+        "prefix": "fn > Result",
         "body": [
             "fn $1($3) -> Result<$2> {",
             "    $4",
             "}"
         ],
-        "description": "fn name(_) -> Result<T,E> { ... }"
-    },
-
-
-    "async-fn-return-result": {
-        "scope": "rust",
-        "prefix": "afn>Res",
-        "body": [
-            "async fn $1($3) -> Result<$2> {",
-            "    $4",
-            "}"
-        ],
-        "description": "async fn name(_) -> Result<T,E> { ... }"
+        "description": "fn name(_) -> Result<T,E> {}"
     },
 
 
     "fn-return-option": {
         "scope": "rust",
-        "prefix": "fn>Opt",
+        "prefix": "fn > Option",
         "body": [
             "fn $1($3) -> Option<$2> {",
             "    $4",
             "}"
         ],
-        "description": "fn name(_) -> Option<T> { ... }"
+        "description": "fn name(_) -> Option<T> {}"
     },
 
 
-    "async-fn-return-option": {
+    "fn-main": {
         "scope": "rust",
-        "prefix": "afn>Opt",
-        "body": [
-            "async fn $1($3) -> Option<$2> {",
-            "    $4",
-            "}"
-        ],
-        "description": "async fn name(_) -> Option<T> { ... }"
-    },
-
-
-    "function-blank-main": {
-        "scope": "rust",
-        "prefix": "main",
+        "prefix": "fn main",
         "body": [
             "fn main() -> ${1:std::io::Result<()>} {",
             "    ${2:println!(\"Hello, world!\");}",
@@ -109,9 +61,9 @@
     },
 
 
-    "function-blank-async-main": {
+    "async-fn-main": {
         "scope": "rust",
-        "prefix": "amain",
+        "prefix": "async fn main",
         "body": [
             "#[${1|tokio,async_std,actix_web|}::main]",
             "async fn main() -> ${2:std::io::Result<()>} {",
@@ -124,9 +76,9 @@
     },
 
 
-    "function-blank-test": {
+    "fn-test": {
         "scope": "rust",
-        "prefix": "test",
+        "prefix": "fn test",
         "body": [
             "#[test]",
             "fn ${1:test}() -> ${2:std::io::Result<()>} {",
@@ -139,15 +91,15 @@
     },
 
 
-    "function-blank-async-test": {
+    "async-fn-test": {
         "scope": "rust",
-        "prefix": "atest",
+        "prefix": "async fn test",
         "body": [
             "use futures::executor::block_on;",
             "",
             "#[test]",
             "fn ${1:test}() -> ${2:std::io::Result<()>} {",
-            "    block_on(async {",
+            "    block_on( async {",
             "        assert_eq!(${3:2+5, 7});",
             "        ",
             "        Ok(())",
@@ -158,9 +110,9 @@
     },
 
 
-    "function-blank-new": {
+    "fn-new": {
         "scope": "rust",
-        "prefix": "fn new",
+        "prefix": "pub fn new",
         "body": [
             "pub fn new($1) -> Self {",
             "    Self {",
@@ -168,37 +120,37 @@
             "    }",
             "}"
         ],
-        "description": "pub fn new(_) -> Self { ... }"
+        "description": "pub fn new(_) -> Self {}"
     },
 
 
-    "function-blank-get": {
+    "fn-get": {
         "scope": "rust",
-        "prefix": "fn get_",
+        "prefix": "pub fn get_",
         "body": [
             "pub fn get_$1(&self) -> $2 {",
             "    &self.$1",
             "}"
         ],
-        "description": "pub fn get_(&self) -> ... { ... }"
+        "description": "pub fn get_(&self) -> ... {}"
     },
 
 
-    "function-blank-set": {
+    "fn-set": {
         "scope": "rust",
-        "prefix": "fn set_",
+        "prefix": "pub fn set_",
         "body": [
             "pub fn set_$1(&mut self, val: $2) {",
             "    self.$1 = val$2;",
             "}"
         ],
-        "description": "pub fn set_(&mut self, val: ...) { ... }"
+        "description": "pub fn set_(&mut self, val: ...) {}"
     },
 
 
-    "function-blank-builder": {
+    "fn-builder": {
         "scope": "rust",
-        "prefix": "fn builder",
+        "prefix": "pub fn builder",
         "body": [
             "pub fn builder() -> $1Builder {",
             "    $1Builder {",
@@ -206,13 +158,13 @@
             "    }",
             "}"
         ],
-        "description": "pub fn builder() -> ... { ... }"
+        "description": "pub fn builder() -> ... {}"
     },
 
 
-    "function-blank-build": {
+    "fn-build": {
         "scope": "rust",
-        "prefix": "fn build",
+        "prefix": "pub fn build",
         "body": [
             "pub fn build(self) -> $1 {",
             "    $1 {",
@@ -220,49 +172,49 @@
             "    }",
             "}"
         ],
-        "description": "pub fn build(self) -> ... { ... }"
+        "description": "pub fn build(self) -> ... {}"
     },
 
 
-    "function-blank-take": {
+    "fn-take": {
         "scope": "rust",
-        "prefix": "fn take",
+        "prefix": "pub fn take",
         "body": [
             "pub fn take(self) -> $1 {",
             "    $2",
             "}"
         ],
-        "description": "pub fn take(self) -> ... { ... }"
+        "description": "pub fn take(self) -> ... {}"
     },
     
     
 	"trait": {
         "scope": "rust",
-        "prefix": "tr",
+        "prefix": "trait ",
         "body": [
             "trait $1 {",
             "    $2",
             "}"
         ],
-        "description": "trait Name { ... }"
+        "description": "trait Name {}"
     },
 
 
     "impl": {
         "scope": "rust",
-        "prefix": "im",
+        "prefix": "impl ",
         "body": [
             "impl $1 {",
             "    $2",
             "}"
         ],
-        "description": "impl Name { ... }"
+        "description": "impl Name {}"
     },
 
 
-    "implementation-blank-display": {
+    "impl-display": {
         "scope": "rust",
-        "prefix": "im Display",
+        "prefix": "impl Display",
         "body": [
             "use std::fmt;",
             "",
@@ -272,43 +224,43 @@
             "    }",
             "}"
         ],
-        "description": "impl Display for Name { ... }"
+        "description": "impl Display for Name {}"
     },
 
 
-    "implementation-blank-from_str": {
+    "impl-from_str": {
         "scope": "rust",
-        "prefix": "im FromStr",
+        "prefix": "impl FromStr",
         "body": [
             "use std::str::FromStr;",
             "",
             "impl FromStr for $1 {",
-            "    type Err = $2;",
+            "    type Err = ${2:Error};",
             "",
             "    fn parse(s: &str) -> std::result::Result<Self, Self::Err> {",
             "        $3",
             "    }",
             "}"
         ],
-        "description": "impl FromStr for Name { ... }"
+        "description": "impl FromStr for Name {}"
     },
 
     
     "struct": {
         "scope": "rust",
-        "prefix": "st",
+        "prefix": "struct ",
         "body": [
             "struct $1 {",
             "    $2",
             "}"
         ],
-        "description": "struct Name { ... }"
+        "description": "struct Name {}"
     },
 
 
     "struct-impl": {
         "scope": "rust",
-        "prefix": "stim",
+        "prefix": "struct impl ",
         "body": [
             "struct $1 {",
             "    $2",
@@ -318,13 +270,13 @@
             "    $3",
             "}"
         ],
-        "description": "struct Name { ... }  impl Name { ... }"
+        "description": "struct Name {}  impl Name {}"
     },
 
 
-    "structure-blank-builder": {
+    "struct-builder": {
         "scope": "rust",
-        "prefix": "st Builder",
+        "prefix": "struct Builder",
         "body": [
             "struct $1Builder {",
             "    $2",
@@ -348,25 +300,25 @@
             "    $6",
             "}"
         ],
-        "description": "struct NameBuilder { ... }  impl NameBuilder { ... }"
+        "description": "struct NameBuilder {}  impl NameBuilder {}"
     },
 
 
     "enum": {
         "scope": "rust",
-        "prefix": "en",
+        "prefix": "enum ",
         "body": [
             "enum $1 {",
             "    $2",
             "}"
         ],
-        "description": "enum Name { ... }"
+        "description": "enum Name {}"
     },
 
 
     "enum-impl": {
         "scope": "rust",
-        "prefix": "enim",
+        "prefix": "enum impl ",
         "body": [
             "enum $1 {",
             "    $2",
@@ -376,13 +328,13 @@
             "    $3",
             "}"
         ],
-        "description": "enum Name { ... }  impl Name { ... }"
+        "description": "enum Name {}  impl Name {}"
     },
 
 
-    "enumeration-blank-builder": {
+    "enum-builder": {
         "scope": "rust",
-        "prefix": "en Builder",
+        "prefix": "enum Builder",
         "body": [
             "enum $1Builder {",
             "    $2",
@@ -404,22 +356,34 @@
             "    $6",
             "}"
         ],
-        "description": "struct NameBuilder { ... }  impl NameBuilder { ... }"
+        "description": "struct NameBuilder {}  impl NameBuilder {}"
     },
 
 
-    "enumeration-blank-error": {
+    "enum-error": {
         "scope": "rust",
-        "prefix": "en Error",
+        "prefix": "enum Error",
         "body": [
-            "use thiserror::Error;",
+            "use add_macro::Error;",
             "",
             "#[derive(Error)]",
             "enum Error {",
             "    #[error(\"${2:Something went wrong... =/}\")]",
-            "    ${1:Error,}",
+            "    ${1:Error},",
             "}",
         ],
-        "description": "enum Error { ... }"
+        "description": "enum Error {}"
+    },
+
+
+    "new-self": {
+        "scope": "rust",
+        "prefix": "Self {",
+        "body": [
+            "Self {",
+            "    $1,",
+            "}",
+        ],
+        "description": "Self {}"
     }
 }
