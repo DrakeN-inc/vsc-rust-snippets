@@ -8,7 +8,6 @@
         "description": "pub(crate) "
     },
     
-    
     "operator-mod": {
         "scope": "rust",
         "prefix": "mod ",
@@ -18,7 +17,6 @@
         "description": "mod name;"
     },
 
-    
     "operator-use": {
         "scope": "rust",
         "prefix": "use ",
@@ -27,7 +25,6 @@
         ],
         "description": "use name::...;"
     },
-
 
     "operator-use-brace": {
         "scope": "rust",
@@ -38,7 +35,6 @@
         "description": "use name::...;"
     },
 
-
     "operator-mod-use": {
         "scope": "rust",
         "prefix": "mod use ",
@@ -47,7 +43,6 @@
         ],
         "description": "mod name;  use name::...;"
     },
-
 
     "operator-mod-use-brace": {
         "scope": "rust",
@@ -58,7 +53,6 @@
         "description": "mod name;  use name::{};"
     },
 
-
     "operator-mod-pub-use": {
         "scope": "rust",
         "prefix": "mod pub use ",
@@ -67,7 +61,6 @@
         ],
         "description": "pub mod name;  pub use name::...;"
     },
-
 
     "operator-mod-pub-use-brace": {
         "scope": "rust",
@@ -78,6 +71,14 @@
         "description": "pub mod name;  pub use name::{};"
     },
 
+    "operator-extern-crate": {
+        "scope": "rust",
+        "prefix": "extern crate ",
+        "body": [
+            "extern crate $1;",
+        ],
+        "description": "extern crate ...;"
+    },
 
     "operator-use-crate": {
         "scope": "rust",
@@ -88,7 +89,6 @@
         "description": "use crate::...;"
     },
 
-
     "operator-use-super": {
         "scope": "rust",
         "prefix": "use super::",
@@ -97,7 +97,6 @@
         ],
         "description": "use super::...;"
     },
-
 
     "operator-use-prelude": {
         "scope": "rust",
@@ -108,7 +107,6 @@
         "description": "use crate::prelude::*;"
     },
 
-
     "operator-use-regex": {
         "scope": "rust",
         "prefix": "use regex::Regex",
@@ -117,7 +115,6 @@
         ],
         "description": "use regex::Regex"
     },
-
 
     "operator-use-proc_macro": {
         "scope": "rust",
@@ -128,7 +125,6 @@
         "description": "proc_macro::...;"
     },
 
-
     "operator-use-proc_macro2": {
         "scope": "rust",
         "prefix": "use proc_macro2::",
@@ -137,7 +133,6 @@
         ],
         "description": "proc_macro2::...;"
     },
-
 
     "operator-use-quote": {
         "scope": "rust",
@@ -148,7 +143,6 @@
         "description": "quote::...;"
     },
 
-
     "operator-use-syn": {
         "scope": "rust",
         "prefix": "use syn::",
@@ -157,7 +151,6 @@
         ],
         "description": "syn::{ ... };"
     },
-
 
     "operator-use-venial": {
         "scope": "rust",
@@ -168,7 +161,6 @@
         "description": "venial::{ ... };"
     },
 
-
     "operator-use-darling": {
         "scope": "rust",
         "prefix": "use darling::",
@@ -177,7 +169,6 @@
         ],
         "description": "darling::...;"
     },
-    
     
 	"operator-type": {
         "scope": "rust",
@@ -188,7 +179,6 @@
         "description": "type Name = ...;"
     },
     
-
     "operator-let": {
         "scope": "rust",
         "prefix": "let ",
@@ -197,7 +187,6 @@
         ],
         "description": "let name = ...;"
     },
-
 
     "operator-let-typed": {
         "scope": "rust",
@@ -208,7 +197,6 @@
         "description": "let name: ... = ...;"
     },
 
-
     "operator-let-mutable": {
         "scope": "rust",
         "prefix": "let mut ",
@@ -217,7 +205,6 @@
         ],
         "description": "let mut name = ...;"
     },
-
 
     "operator-let-typed-mutable": {
         "scope": "rust",
@@ -228,7 +215,6 @@
         "description": "let mut name: ... = ...;"
     },
 
-
     "operator-const": {
         "scope": "rust",
         "prefix": "const ",
@@ -237,7 +223,6 @@
         ],
         "description": "const name: ... = ...;"
     },
-
 
     "operator-static": {
         "scope": "rust",
@@ -248,7 +233,6 @@
         "description": "static name: ... = ...;"
     },
 
-
     "operator-return": {
         "scope": "rust",
         "prefix": "return ",
@@ -257,7 +241,6 @@
         ],
         "description": "return ...;"
     },
-
 
     "operator-break": {
         "scope": "rust",
@@ -268,7 +251,6 @@
         "description": "break;"
     },
     
-    
     "operator-break-return": {
         "scope": "rust",
         "prefix": "break ",
@@ -278,7 +260,6 @@
         "description": "break ...;"
     },
 
-    
     "operator-continue": {
         "scope": "rust",
         "prefix": "continue",

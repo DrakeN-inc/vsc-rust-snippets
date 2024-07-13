@@ -7,6 +7,13 @@
 * GitHub: _[DrakeN-inc](https://github.com/DrakeN-inc/vscode-rust-snippets.git)_
 
 
+## ABC:
+| Prefix:                   | Result:                                               |
+| ------------------------- | ----------------------------------------------------- |
+| proc_macro                | proc_macro                                            |
+| proc_macro2               | proc_macro2                                           |
+
+
 ## Comments:
 | Prefix:                   | Result:                                               |
 | ------------------------- | ----------------------------------------------------- |
@@ -51,6 +58,7 @@
 | mod use {                 | mod name;  use name::{};                              |
 | mod pub use               | mod name;  pub use name::...;                         |
 | mod pub use {             | mod name;  pub use name::{};                          |
+| extern crate              | extern crate ...;                                     |
 | use crate::               | use crate::...;                                       |
 | use super::               | use super::...;                                       |
 | ues crate::prelude::      | use crate::prelude::*;                                |

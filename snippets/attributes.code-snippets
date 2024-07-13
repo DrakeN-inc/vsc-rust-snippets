@@ -8,7 +8,6 @@
         "description": "#[allow(...)]"
     },
 
-
     "attribute-derive": {
         "scope": "rust",
         "prefix": "#derive",
@@ -17,7 +16,6 @@
         ],
         "description": "#[derive(...)]"
     },
-
 
     "attribute-cfg": {
         "scope": "rust",
@@ -28,7 +26,6 @@
         "description": "#[cfg(...)]"
     },
 
-
     "attribute-test": {
         "scope": "rust",
         "prefix": "#test",
@@ -37,7 +34,6 @@
         ],
         "description": "#[test]"
     },
-
 
     "attribute-doc": {
         "scope": "rust",
@@ -58,7 +54,6 @@
         "description": "#![doc = \"...\"]"
     },
 
-
     "attribute-error": {
         "scope": "rust",
         "prefix": "#error",
@@ -67,7 +62,6 @@
         ],
         "description": "#[error(\"...\")]"
     },
-
 
     "attribute-display": {
         "scope": "rust",
@@ -78,7 +72,6 @@
         "description": "#[display(\"...\")]"
     },
 
-
     "attribute-macro_export": {
         "scope": "rust",
         "prefix": "#macro_export",
@@ -87,7 +80,6 @@
         ],
         "description": "#[macro_export]"
     },
-
 
     "attribute-macro_use": {
         "scope": "rust",
@@ -98,7 +90,6 @@
         "description": "#[macro_use]"
     },
 
-
     "attribute-proc_macro": {
         "scope": "rust",
         "prefix": "#proc_macro",
@@ -108,7 +99,6 @@
         "description": "#[proc_macro]"
     },
 
-
     "attribute-proc_macro_attribute": {
         "scope": "rust",
         "prefix": "#proc_macro_attribute",
@@ -117,7 +107,6 @@
         ],
         "description": "#[proc_macro_attribute]"
     },
-
 
     "attribute-proc_macro_derive": {
         "scope": "rust",

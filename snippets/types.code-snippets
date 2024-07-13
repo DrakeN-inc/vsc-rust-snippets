@@ -8,7 +8,6 @@
         "description": "Result<T, E>"
     },
 
-
     "type-alias-option": {
         "scope": "rust",
         "prefix": "Option",
@@ -17,7 +16,6 @@
         ],
         "description": "Option<T>"
     },
-
 
     "type-alias-mutex": {
         "scope": "rust",
@@ -28,7 +26,6 @@
         "description": "Mutex<T>"
     },
 
-
     "type-alias-arc": {
         "scope": "rust",
         "prefix": "Arc",
@@ -37,7 +34,6 @@
         ],
         "description": "Arc<T>"
     },
-
 
     "type-alias-arc-mutex": {
         "scope": "rust",
@@ -48,7 +44,6 @@
         "description": "Arc<Mutex<T>>"
     },
 
-
     "type-alias-arc-mutex-new": {
         "scope": "rust",
         "prefix": "Arc<Mutex::new",
@@ -57,7 +52,6 @@
         ],
         "description": "Arc::new(Mutex::new(...))"
     },
-
 
     "type-alias-into": {
         "scope": "rust",
@@ -68,7 +62,6 @@
         "description": "Into<...>"
     },
 
-
     "type-alias-into-string": {
         "scope": "rust",
         "prefix": "Into<String",
@@ -77,7 +70,6 @@
         ],
         "description": "Into<String>"
     },
-
 
     "type-alias-from": {
         "scope": "rust",
@@ -88,7 +80,6 @@
         "description": "From<...>"
     },
 
-
     "type-alias-from_str": {
         "scope": "rust",
         "prefix": "From<&str",
@@ -97,7 +88,6 @@
         ],
         "description": "From<...>"
     },
-
 
     "type-alias-token_stream": {
         "scope": "rust",
@@ -108,7 +98,6 @@
         "description": "TokenStream"
     },
 
-
     "type-alias-derive_input": {
         "scope": "rust",
         "prefix": "DeriveInput",
@@ -117,7 +106,6 @@
         ],
         "description": "DeriveInput"
     },
-
 
     "type-alias-token_tree": {
         "scope": "rust",
@@ -128,7 +116,6 @@
         "description": "TokenTree"
     },
 
-
     "type-alias-attribute": {
         "scope": "rust",
         "prefix": "Attribute",
@@ -137,7 +124,6 @@
         ],
         "description": "Attribute"
     },
-
 
     "type-alias-attribute_value": {
         "scope": "rust",
@@ -148,7 +134,6 @@
         "description": "AttributeValue"
     },
 
-
     "type-alias-field": {
         "scope": "rust",
         "prefix": "Field",
@@ -157,7 +142,6 @@
         ],
         "description": "Field"
     },
-
 
     "type-alias-fields": {
         "scope": "rust",
@@ -168,7 +152,6 @@
         "description": "Fields"
     },
 
-
     "type-alias-ident": {
         "scope": "rust",
         "prefix": "Ident",
@@ -177,7 +160,6 @@
         ],
         "description": "Ident"
     },
-
 
     "type-alias-span": {
         "scope": "rust",
@@ -188,7 +170,6 @@
         "description": "Span"
     },
 
-
     "type-alias-literal": {
         "scope": "rust",
         "prefix": "Literal",
@@ -197,7 +178,6 @@
         ],
         "description": "Literal"
     },
-
 
     "type-blank-result": {
         "scope": "rust",

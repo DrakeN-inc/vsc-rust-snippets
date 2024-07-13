@@ -16,6 +16,7 @@
 	},
   "contributes": {
     "snippets": [
+      {"language": "rust", "path": "./snippets/abc.code-snippets"},
       {"language": "rust", "path": "./snippets/comments.code-snippets"},
       {"language": "rust", "path": "./snippets/attributes.code-snippets"},
       {"language": "rust", "path": "./snippets/operators.code-snippets"},

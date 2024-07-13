@@ -31,7 +31,6 @@
         "description": "/// ...  /// # Examples: ...  /// # Dependencies: ..."
     },
 
-
     "comment-doc-context": {
         "scope": "rust",
         "prefix": "/!doc",
@@ -74,7 +73,6 @@
         "description": "// NOTE: ..."
     },
 
-
     "comment-warning": {
         "scope": "rust",
         "prefix": "/warning",
@@ -94,7 +92,6 @@
         "description": "// TODO: ..."
     },
 
-
     "comment-fix": {
         "scope": "rust",
         "prefix": "/fix",
@@ -104,7 +101,6 @@
         "description": "// FIX: ..."
     },
 
-
     "text-hello-world": {
         "scope": "rust",
         "prefix": "hello",
@@ -113,7 +109,6 @@
         ],
         "description": "\"Hello, world!\""
     },
-
 
     "text-lorem-ipsum": {
         "scope": "rust",

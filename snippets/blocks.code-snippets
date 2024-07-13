@@ -22,7 +22,6 @@
         "description": "async {}"
     },
 
-
     "block-async-block_on": {
         "scope": "rust",
         "prefix": "async { block_on }",
@@ -35,7 +34,6 @@
         ],
         "description": "block_on( async {} );"
     },
-
 
     "block-unsafe": {
         "scope": "rust",
@@ -60,7 +58,6 @@
         "description": "if ... {}"
     },
 
-
     "block-if-else": {
         "scope": "rust",
         "prefix": "if else ",
@@ -73,7 +70,6 @@
         ],
         "description": "if ... {} else {}"
     },
-
 
     "block-if-else-if": {
         "scope": "rust",
@@ -90,7 +86,6 @@
         "description": "if ... {} else {}"
     },
 
-
     "block-short-if-else": {
         "scope": "rust",
         "prefix": "if?",
@@ -99,7 +94,6 @@
         ],
         "description": "if ... { }else{ }"
     },
-
 
     "block-if-let": {
         "scope": "rust",
@@ -112,7 +106,6 @@
         "description": "if let ... = ... {}"
     },
 
-
     "alias-if-let-result-ok": {
         "scope": "rust",
         "prefix": "if let Ok",
@@ -123,7 +116,6 @@
         ],
         "description": "if let Ok(...) = ... {}"
     },
-
 
     "alias-if-let-result-err": {
         "scope": "rust",
@@ -136,7 +128,6 @@
         "description": "if let Err(...) = ... {}"
     },
 
-
     "alias-if-let-option-some": {
         "scope": "rust",
         "prefix": "if let Some",
@@ -147,7 +138,6 @@
         ],
         "description": "if let Some(...) = ... {}"
     },
-
 
     "alias-if-let-option-none": {
         "scope": "rust",
@@ -160,7 +150,6 @@
         "description": "if let None = ... {}"
     },
 
-
     "block-match": {
         "scope": "rust",
         "prefix": "match ",
@@ -171,7 +160,6 @@
         ],
         "description": "match ... { ... => ..., }"
     },
-
 
     "alias-match-result": {
         "scope": "rust",
@@ -184,7 +172,6 @@
         ],
         "description": "match ... { Ok(v) =>, Err(e) => }"
     },
-
 
     "alias-match-option": {
         "scope": "rust",
@@ -210,7 +197,6 @@
         "description": "for ... in ... {}"
     },
 
-
     "block-for-index": {
         "scope": "rust",
         "prefix": "for i ",
@@ -221,7 +207,6 @@
         ],
         "description": "for i in 0..n {}"
     },
-
 
     "block-for-key-value": {
         "scope": "rust",
@@ -234,7 +219,6 @@
         "description": "for (k, v) in ... {}"
     },
 
-
     "block-while": {
         "scope": "rust",
         "prefix": "while ",
@@ -245,7 +229,6 @@
         ],
         "description": "while ... {}"
     },
-
 
     "block-while-let": {
         "scope": "rust",
@@ -258,7 +241,6 @@
         "description": "while let ... = ... {}"
     },
 
-
     "alias-while-let-result-ok": {
         "scope": "rust",
         "prefix": "while let Ok",
@@ -269,7 +251,6 @@
         ],
         "description": "while let Ok(...) = ... {}"
     },
-
 
     "alias-while-let-result-err": {
         "scope": "rust",
@@ -294,7 +275,6 @@
         "description": "while let Some(...) = ... {}"
     },
 
-
     "alias-while-let-option-none": {
         "scope": "rust",
         "prefix": "while let None",
@@ -305,7 +285,6 @@
         ],
         "description": "while let None = ... {}"
     },
-
 
     "block-loop": {
         "scope": "rust",

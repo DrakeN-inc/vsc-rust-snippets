@@ -1,0 +1,19 @@
+{
+    "abc-proc_macro": {
+        "scope": "rust",
+        "prefix": "proc_macro",
+        "body": [
+            "proc_macro",
+        ],
+        "description": "proc_macro"
+    },
+
+    "abc-proc_macro2": {
+        "scope": "rust",
+        "prefix": "proc_macro2",
+        "body": [
+            "proc_macro2",
+        ],
+        "description": "proc_macro2"
+    },
+}
