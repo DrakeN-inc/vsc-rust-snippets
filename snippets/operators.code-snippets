@@ -81,7 +81,7 @@
 
     "operator-use-crate": {
         "scope": "rust",
-        "prefix": "crate ",
+        "prefix": "use crate::",
         "body": [
             "use crate::$1;",
         ],
@@ -91,7 +91,7 @@
 
     "operator-use-super": {
         "scope": "rust",
-        "prefix": "super ",
+        "prefix": "use super::",
         "body": [
             "use super::$1;",
         ],
@@ -101,11 +101,81 @@
 
     "operator-use-prelude": {
         "scope": "rust",
-        "prefix": "prelude ",
+        "prefix": "use crate::prelude::",
         "body": [
             "use crate::prelude::${1:*};",
         ],
         "description": "use crate::prelude::*;"
+    },
+
+
+    "operator-use-regex": {
+        "scope": "rust",
+        "prefix": "use regex::Regex",
+        "body": [
+            "use regex::${1:Regex};",
+        ],
+        "description": "use regex::Regex"
+    },
+
+
+    "operator-use-proc_macro": {
+        "scope": "rust",
+        "prefix": "use proc_macro::",
+        "body": [
+            "use proc_macro::$1;",
+        ],
+        "description": "proc_macro::...;"
+    },
+
+
+    "operator-use-proc_macro2": {
+        "scope": "rust",
+        "prefix": "use proc_macro2::",
+        "body": [
+            "use proc_macro2::$1;",
+        ],
+        "description": "proc_macro2::...;"
+    },
+
+
+    "operator-use-quote": {
+        "scope": "rust",
+        "prefix": "use quote::",
+        "body": [
+            "use quote::${1:quote};",
+        ],
+        "description": "quote::...;"
+    },
+
+
+    "operator-use-syn": {
+        "scope": "rust",
+        "prefix": "use syn::",
+        "body": [
+            "use syn::{ $1 };",
+        ],
+        "description": "syn::{ ... };"
+    },
+
+
+    "operator-use-venial": {
+        "scope": "rust",
+        "prefix": "use venial::",
+        "body": [
+            "use venial::{ $1 };",
+        ],
+        "description": "venial::{ ... };"
+    },
+
+
+    "operator-use-darling": {
+        "scope": "rust",
+        "prefix": "use darling::",
+        "body": [
+            "use darling::$1;",
+        ],
+        "description": "darling::...;"
     },
     
     

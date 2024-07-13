@@ -1,10 +1,10 @@
-# The __Rust Short Snippets__ extension
+# The __Rust Snippets__ extension
 
-## The best short snippets for Rust programming language to save your time.
+## The best vscode snippets for the Rust programming language to help you with your coding.
 
-#### P.s. If you have an idea to new snippets then write to me, thank's!
+#### P.s. If you have ideas to new snippets, write to me, thank's!
 * Telegram: _[DrakeN_inc](https://t.me/DrakeN_inc)_
-* GitHub: _[DrakeN-inc](https://github.com/DrakeN-inc/vsc-rust-snippets.git)_
+* GitHub: _[DrakeN-inc](https://github.com/DrakeN-inc/vscode-rust-snippets.git)_
 
 
 ## Comments:
@@ -50,9 +50,16 @@
 | mod use {                 | mod name;  use name::{};                              |
 | mod pub use               | mod name;  pub use name::...;                         |
 | mod pub use {             | mod name;  pub use name::{};                          |
-| crate                     | use crate::...;                                       |
-| super                     | use super::...;                                       |
-| prelude                   | use crate::prelude::*;                                |
+| use crate::               | use crate::...;                                       |
+| use super::               | use super::...;                                       |
+| ues crate::prelude::      | use crate::prelude::*;                                |
+| ues regex::Regex          | use regex::Regex;                                     |
+| use proc_macro::          | use proc_macro::...;                                  |
+| use proc_macro2::         | use proc_macro2::...;                                 |
+| use quote::               | use quote::...;                                       |
+| use syn::                 | use syn::{ ... };                                     |
+| use venial::              | use venial::{ ... };                                  |
+| use darling::             | use darling::...;                                     |
 | type                      | type name = ...;                                      |
 | let                       | let name = ...;                                       |
 | let mut                   | let mut name = ...;                                   |
@@ -117,7 +124,9 @@
 | trait                     | trait Name {}                                         |
 | impl                      | impl Name {}                                          |
 | impl Display              | impl Display for Name {}                              |
+| impl From                 | impl From<T> for Name {}                              |
 | impl FromStr              | impl FromStr for Name {}                              |
+| impl Into                 | impl Into<T> for Name {}                              |
 | struct                    | struct Name {}                                        |
 | struct impl               | struct Name {}  impl Name {}                          |
 | struct Builder            | struct _Builder {}  impl _Builder {}                  |
@@ -141,6 +150,16 @@
 | Into<String               | Into<String>                                          |
 | From                      | From<T>                                               |
 | From<&str                 | From<&str>                                            |
+| TokenStream               | TokenStream                                           |
+| DeriveInput               | DeriveInput                                           |
+| TokenTree                 | TokenTree                                             |
+| Attribute                 | Attribute                                             |
+| AttributeValue            | AttributeValue                                        |
+| Field                     | Field                                                 |
+| Fields                    | Fields                                                |
+| Ident                     | Ident                                                 |
+| Span                      | Span                                                  |
+| Literal                   | Literal                                               |
 | pub type Result           | pub type Result<T> = std::result::Result<T, Error>;   |
 | pub type Handler          | pub type Handler = fn();                              |
 
@@ -174,6 +193,10 @@
 | panic!,                   | panic!("{}", ...)                                     |
 | todo!                     | todo!("...")                                          |
 | todo!,                    | todo!("{}", ...)                                      |
+| unimplemented!            | unimplemented!("...")                                 |
+| unimplemented!,           | unimplemented!("{}", ...)                             |
+| unreachable!              | unreachable!("...")                                   |
+| unreachable!,             | unreachable!("{}", ...)                               |
 | dbg!                      | dbg!(...)                                             |
 | assert!                   | assert!(...)                                          |
 | assert_eq!                | assert_eq!(..., ...)                                  |

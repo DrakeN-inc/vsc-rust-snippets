@@ -218,13 +218,29 @@
         "body": [
             "use std::fmt;",
             "",
-            "impl Display for $1 {",
+            "impl fmt::Display for $1 {",
             "    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {",
             "        write!(f, \"$2\", $3)",
             "    }",
             "}"
         ],
         "description": "impl Display for Name {}"
+    },
+
+
+    "impl-from": {
+        "scope": "rust",
+        "prefix": "impl From<",
+        "body": [
+            "impl From<$1> for $2 {",
+            "    fn from(value: $1) -> Self {",
+            "        Self {",
+            "            $3",
+            "        }",
+            "    }",
+            "}"
+        ],
+        "description": "impl From<T> for Name {}"
     },
 
 
@@ -243,6 +259,20 @@
             "}"
         ],
         "description": "impl FromStr for Name {}"
+    },
+
+
+    "impl-into": {
+        "scope": "rust",
+        "prefix": "impl Into<",
+        "body": [
+            "impl Into<$1> for $2 {",
+            "    fn into(self) -> $1 {",
+            "        $3",
+            "    }",
+            "}"
+        ],
+        "description": "impl IntoStr for Name {}"
     },
 
     

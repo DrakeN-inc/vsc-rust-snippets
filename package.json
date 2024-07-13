@@ -1,7 +1,7 @@
 {
-  "name": "vsc-rust-snippets",
-  "displayName": "Rust Short Snippets",
-  "description": "The short snippets for Rust language",
+  "name": "vscode-rust-snippets",
+  "displayName": "Rust Snippets",
+  "description": "The best vscode snippets for the Rust programming language to help you with your coding.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.90.0"
@@ -12,7 +12,7 @@
   "icon": "icon.png",
   "repository": {
 		"type": "git",
-		"url": "https://github.com/DrakeN-inc/vsc-rust-snippets.git"
+		"url": "https://github.com/DrakeN-inc/vscode-rust-snippets.git"
 	},
   "contributes": {
     "snippets": [

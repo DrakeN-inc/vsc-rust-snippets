@@ -99,6 +99,106 @@
     },
 
 
+    "type-alias-token_stream": {
+        "scope": "rust",
+        "prefix": "TokenStream",
+        "body": [
+            "TokenStream",
+        ],
+        "description": "TokenStream"
+    },
+
+
+    "type-alias-derive_input": {
+        "scope": "rust",
+        "prefix": "DeriveInput",
+        "body": [
+            "DeriveInput",
+        ],
+        "description": "DeriveInput"
+    },
+
+
+    "type-alias-token_tree": {
+        "scope": "rust",
+        "prefix": "TokenTree",
+        "body": [
+            "TokenTree",
+        ],
+        "description": "TokenTree"
+    },
+
+
+    "type-alias-attribute": {
+        "scope": "rust",
+        "prefix": "Attribute",
+        "body": [
+            "Attribute",
+        ],
+        "description": "Attribute"
+    },
+
+
+    "type-alias-attribute_value": {
+        "scope": "rust",
+        "prefix": "AttributeValue",
+        "body": [
+            "AttributeValue",
+        ],
+        "description": "AttributeValue"
+    },
+
+
+    "type-alias-field": {
+        "scope": "rust",
+        "prefix": "Field",
+        "body": [
+            "Field",
+        ],
+        "description": "Field"
+    },
+
+
+    "type-alias-fields": {
+        "scope": "rust",
+        "prefix": "Fields",
+        "body": [
+            "Fields",
+        ],
+        "description": "Fields"
+    },
+
+
+    "type-alias-ident": {
+        "scope": "rust",
+        "prefix": "Ident",
+        "body": [
+            "Ident",
+        ],
+        "description": "Ident"
+    },
+
+
+    "type-alias-span": {
+        "scope": "rust",
+        "prefix": "Span",
+        "body": [
+            "Span",
+        ],
+        "description": "Span"
+    },
+
+
+    "type-alias-literal": {
+        "scope": "rust",
+        "prefix": "Literal",
+        "body": [
+            "Literal",
+        ],
+        "description": "Literal"
+    },
+
+
     "type-blank-result": {
         "scope": "rust",
         "prefix": "pub type Result",
