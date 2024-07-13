@@ -14,9 +14,10 @@
 | /doc dep                  | /// # Examples: ...  # Dependencies: ...              |
 | /!doc                     | //! # Examples: ...                                   |
 | /!doc dep                 | //! # Examples: ...  # Dependencies: ...              |
+| /note                     | // NOTE: ...                                          |
+| /warning                  | // WARNING: ...                                       |
 | /todo                     | // TODO: ...                                          |
 | /fix                      | // FIX: ...                                           |
-| /note                     | // NOTE: ...                                          |
 | hello                     | "Hello, world!"                                       |
 | lorem                     | "Lorem ipsum dolor ..."                               |
 

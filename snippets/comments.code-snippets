@@ -65,6 +65,26 @@
     },
     
     
+    "comment-note": {
+        "scope": "rust",
+        "prefix": "/note",
+        "body": [
+            "// NOTE: ${1:...}",
+        ],
+        "description": "// NOTE: ..."
+    },
+
+
+    "comment-warning": {
+        "scope": "rust",
+        "prefix": "/warning",
+        "body": [
+            "// WARNING: ${1:...}",
+        ],
+        "description": "// WARNING: ..."
+    },
+    
+    
 	"comment-todo": {
         "scope": "rust",
         "prefix": "/todo",
@@ -82,16 +102,6 @@
             "// FIX: ${1:...}",
         ],
         "description": "// FIX: ..."
-    },
-
-
-    "comment-note": {
-        "scope": "rust",
-        "prefix": "/note",
-        "body": [
-            "// NOTE: ${1:...}",
-        ],
-        "description": "// NOTE: ..."
     },
 
 
